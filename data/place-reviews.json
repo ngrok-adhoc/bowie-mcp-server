@@ -1,0 +1,540 @@
+{
+  "checked_on": "2026-11-19",
+  "notes": "Public rating snapshots may differ by source, listing scope or refresh date. Comments paraphrase public reviews, summaries or listings as indicated. This file is separate from Bowie's submitted ratings.",
+  "places": [
+    {
+      "id": "whites-hill-reserve",
+      "type": "park",
+      "name": "Whites Hill Reserve",
+      "description": "The fenced off-leash area is off Boundary Road in the south-west of the reserve. Separate yards cater for large and small dogs. Mature mango trees provide shade, and the enclosure has drinking water, seating, agility equipment and waste bags. Dogs are on-leash in the rest of the reserve.",
+      "public_ratings": [
+        {
+          "stars": 4.5,
+          "review_count": 239,
+          "platform": "Google",
+          "scope": "dog_enclosure",
+          "source": "https://pawscapes.com.au/parks/camp-hill-whites-hill-reserve-fenced-dog-park"
+        }
+      ],
+      "comments": [
+        {
+          "text": "Visitors highlight the large enclosure, separation by dog size and shade from mature mango trees.",
+          "kind": "review_summary",
+          "source": "https://pawscapes.com.au/parks/camp-hill-whites-hill-reserve-fenced-dog-park"
+        },
+        {
+          "text": "The local guide lists a drinking fountain, shelter, seating and waste bags.",
+          "kind": "listing",
+          "source": "https://www.brisbanedogwalkers.com.au/blog/whites-hill-reserve-dog-park-camp-hill-dog-park/"
+        }
+      ]
+    },
+    {
+      "id": "glindemann-park",
+      "type": "park",
+      "name": "Glindemann Park",
+      "description": "Glindemann has an unfenced off-leash area. The wider park has shady spots, undercover seating, barbecues and public toilets. A dog-bowl fountain is mapped elsewhere in the park, so plan to bring water into the off-leash area.",
+      "public_ratings": [
+        {
+          "stars": 4.5,
+          "review_count": 77,
+          "platform": "Google",
+          "scope": "whole_park",
+          "source": "https://wanderlog.com/place/details/12311746"
+        }
+      ],
+      "comments": [
+        {
+          "text": "A visitor appreciated parking on both sides, public toilets and plenty of covered seating and barbecue space. These observations concern the wider park.",
+          "kind": "review",
+          "source": "https://wanderlog.com/place/details/12311746"
+        },
+        {
+          "text": "The directory lists shade and water for the park. It does not establish that water is available in the off-leash area itself.",
+          "kind": "listing",
+          "source": "https://www.findadogpark.com.au/councils/brisbane-qld"
+        }
+      ]
+    },
+    {
+      "id": "shaftesbury-street-park",
+      "type": "park",
+      "name": "Shaftesbury Street Park",
+      "description": "Separate fenced and double-gated yards cater for big and small dogs. Visitors report a drinking fountain in each yard and shaded seating in the larger one. Toilets and a playground are close by. Weekend mornings can get busy.",
+      "public_ratings": [
+        {
+          "stars": 4.4,
+          "review_count": 237,
+          "platform": "Google",
+          "scope": "dog_enclosure",
+          "source": "https://pawscapes.com.au/parks/tarragindi-shaftesbury-street-big-and-small-dog-parks"
+        },
+        {
+          "stars": 4.2,
+          "review_count": 5,
+          "platform": "DogPack",
+          "scope": "dog_enclosure",
+          "source": "https://www.dogpackapp.com/parks/australia/queensland/brisbane-city/shaftesbury-street-dog-park"
+        }
+      ],
+      "comments": [
+        {
+          "text": "A dog owner reported a fountain in each enclosure, shaded seating in the larger yard and toilets nearby.",
+          "kind": "review",
+          "source": "https://www.dogpackapp.com/parks/australia/queensland/brisbane-city/shaftesbury-street-dog-park"
+        },
+        {
+          "text": "Visitors mention friendly owners, separate dog yards and a playground nearby. The guide says weekend mornings can draw a crowd.",
+          "kind": "review_summary",
+          "source": "https://pawscapes.com.au/parks/tarragindi-shaftesbury-street-big-and-small-dog-parks"
+        }
+      ]
+    },
+    {
+      "id": "abbeville-street-park",
+      "type": "park",
+      "name": "Abbeville Street Park",
+      "description": "The fenced area has a separate small-dog section, shade from mature trees and dog water stations. Visitors mention the walking loop around the wider park. A local guide advises bringing water as a backup, and reviewers report limited seating and a lack of toilets.",
+      "public_ratings": [
+        {
+          "stars": 4.5,
+          "review_count": 11,
+          "platform": "Google",
+          "scope": "dog_enclosure",
+          "source": "https://pawscapes.com.au/parks/upper-mount-gravatt-abbeville-street-park-fenced-dog-park"
+        },
+        {
+          "stars": 4.3,
+          "review_count": 174,
+          "platform": "Google",
+          "scope": "whole_park",
+          "source": "https://wanderlog.com/place/details/3953769/abbeville-street-park"
+        }
+      ],
+      "comments": [
+        {
+          "text": "Visitors liked the upgraded small-dog section and the loop around the wider park. Limited seating and a lack of toilets came up in comments.",
+          "kind": "review_summary",
+          "source": "https://wanderlog.com/place/details/3953769/abbeville-street-park"
+        },
+        {
+          "text": "The guide reports water stations and mature shade, but advises carrying water in case the stations are unavailable.",
+          "kind": "listing",
+          "source": "https://pawscapes.com.au/parks/upper-mount-gravatt-abbeville-street-park-fenced-dog-park"
+        }
+      ]
+    },
+    {
+      "id": "ekibin-park-east",
+      "type": "park",
+      "name": "Ekibin Park East",
+      "description": "The fenced dog area is on the Victoria Terrace side of the park. A local guide lists a double-gated entrance, shade, seating and a bubbler. Visitors mention bare or worn ground that can get muddy after heavy rain.",
+      "public_ratings": [
+        {
+          "stars": 4.1,
+          "review_count": 101,
+          "platform": "Google",
+          "scope": "dog_enclosure",
+          "source": "https://pawscapes.com.au/parks/greenslopes-ekibin-park-east-fenced-dog-park"
+        }
+      ],
+      "comments": [
+        {
+          "text": "Review themes include tree shade, open space and secure gates. Visitors also mention worn or muddy ground and crowding at busy times.",
+          "kind": "review_summary",
+          "source": "https://dogparkfinder.com.au/parks/ekibin-park-east-fenced-dog-park-greenslopes-qld/"
+        },
+        {
+          "text": "The guide reports a drinking bubbler and a double-gated entry, and says bare earth can become muddy after heavy rain.",
+          "kind": "listing",
+          "source": "https://pawscapes.com.au/parks/greenslopes-ekibin-park-east-fenced-dog-park"
+        }
+      ]
+    },
+    {
+      "id": "wembley-park",
+      "type": "park",
+      "name": "Wembley Park",
+      "description": "The fenced Coorparoo enclosure has room to run, shade and agility equipment. Council maps a drinking fountain and tap, while some visitors report limited access to taps. The park can get busy at peak times.",
+      "public_ratings": [
+        {
+          "stars": 4.3,
+          "review_count": 65,
+          "platform": "Google",
+          "scope": "dog_enclosure",
+          "source": "https://dogparkfinder.com.au/parks/wembley-park-dog-park-coorparoo-qld/"
+        }
+      ],
+      "comments": [
+        {
+          "text": "Reviewers mention roomy, shady grounds and friendly dogs. Some report limited access to taps and crowding at peak times.",
+          "kind": "review_summary",
+          "source": "https://dogparkfinder.com.au/parks/wembley-park-dog-park-coorparoo-qld/"
+        }
+      ]
+    },
+    {
+      "id": "joe-bradfield-centre-park",
+      "type": "park",
+      "name": "Joe Bradfield Centre Park",
+      "description": "The Carina enclosure has a double-gated entrance, a drinking fountain and parking nearby. A regular reports that large and small dogs share the yard and it can fill up at busy times.",
+      "public_ratings": [
+        {
+          "stars": 4.8,
+          "review_count": 6,
+          "platform": "DogPack",
+          "scope": "dog_enclosure",
+          "source": "https://www.dogpackapp.com/parks/australia/queensland/brisbane-city/joe-bradfield-dog-park"
+        }
+      ],
+      "comments": [
+        {
+          "text": "A regular said the fenced yard can get busy and large and small dogs use the same space.",
+          "kind": "review",
+          "source": "https://www.dogpackapp.com/parks/australia/queensland/brisbane-city/joe-bradfield-dog-park"
+        },
+        {
+          "text": "DogPack lists a water fountain, a double-gated entrance and nearby parking.",
+          "kind": "listing",
+          "source": "https://www.dogpackapp.com/parks/australia/queensland/brisbane-city/joe-bradfield-dog-park"
+        }
+      ]
+    },
+    {
+      "id": "perth-street-park",
+      "type": "park",
+      "name": "Perth Street Park",
+      "description": "The wider park has shade and separate areas for family recreation and off-leash dogs. Council maps a drinking fountain and dog bowl in the enclosure. Some visitors report limited access to taps.",
+      "public_ratings": [
+        {
+          "stars": 4.5,
+          "review_count": 179,
+          "platform": "Google",
+          "scope": "whole_park",
+          "source": "https://funtivities.com.au/activities/perth-street-park"
+        }
+      ],
+      "comments": [
+        {
+          "text": "Visitors mention shade, clean grounds and the separation of dog and family areas. Some describe taps as limited, so water access may depend on where you enter.",
+          "kind": "review_summary",
+          "source": "https://dogparkfinder.com.au/parks/perth-street-park-camp-hill-qld/"
+        }
+      ]
+    },
+    {
+      "id": "ron-woolley-place",
+      "type": "park",
+      "name": "Ron Woolley Place",
+      "description": "The Tones Road fenced enclosure has a dog bubbler, agility equipment and waste bags. A local listing describes a short uphill walk from the parking area, and visitors mention morning sun in the yard.",
+      "public_ratings": [
+        {
+          "stars": 4.5,
+          "review_count": 2,
+          "platform": "DogPack",
+          "scope": "dog_enclosure",
+          "source": "https://www.dogpackapp.com/parks/australia/queensland/mansfield"
+        }
+      ],
+      "comments": [
+        {
+          "text": "The Tones Road enclosure listing describes a short uphill walk from parking. Reviews on the listing mention morning sun in the dog area.",
+          "kind": "review_summary",
+          "source": "https://www.dogpackapp.com/parks/australia/queensland/mansfield"
+        },
+        {
+          "text": "A local guide reports a dog bubbler, agility equipment and waste bags at the Tones Road site.",
+          "kind": "listing",
+          "source": "https://alisoncookephotography.com/dog-parks-in-brisbane/"
+        }
+      ]
+    },
+    {
+      "id": "woolloongabba-rotary-park",
+      "type": "park",
+      "name": "Woolloongabba Rotary Park",
+      "description": "The park has a fenced off-leash area beside separate family recreation spaces. Visitors mention shade and open ground, with muddy patches and limited tap access at times. Parts of the wider park can be dark at night.",
+      "public_ratings": [
+        {
+          "stars": 4.3,
+          "review_count": 149,
+          "platform": "Google",
+          "scope": "whole_park",
+          "source": "https://wanderlog.com/place/details/4445276/woolloongabba-rotary-park"
+        }
+      ],
+      "comments": [
+        {
+          "text": "Visitors liked the shade and tidy facilities. Some found parts of the wider park poorly lit at night.",
+          "kind": "review_summary",
+          "source": "https://wanderlog.com/place/details/4445276/woolloongabba-rotary-park"
+        },
+        {
+          "text": "Review themes include open space and separate family areas. Some visitors report muddy ground or limited access to taps.",
+          "kind": "review_summary",
+          "source": "https://dogparkfinder.com.au/parks/woolloongabba-rotary-park-east-brisbane-qld/"
+        }
+      ]
+    },
+    {
+      "id": "whites-hill-cafe",
+      "type": "cafe",
+      "name": "Cafe & Bar on Whites Hill",
+      "description": "The café has dog-friendly outdoor seating beside Whites Hill Reserve, with room for a large dog under the table. A local guide reports water bowls are usually available and staff may make a puppuccino on request. One visitor liked the coffee and toasted sandwich.",
+      "public_ratings": [
+        {
+          "stars": 4.2,
+          "review_count": 113,
+          "platform": "Google",
+          "scope": "venue",
+          "source": "https://restaurantguru.com/Cafe-and-Bar-on-Whites-Hill-Camp-Hill-Queensland"
+        }
+      ],
+      "comments": [
+        {
+          "text": "One visitor liked the coffee and toasted sandwich and found the outdoor area a comfortable place to sit with a large dog.",
+          "kind": "review",
+          "source": "https://restaurantguru.com/Cafe-and-Bar-on-Whites-Hill-Camp-Hill-Queensland"
+        },
+        {
+          "text": "The guide reports that staff often put out water bowls and may make a puppuccino on request.",
+          "kind": "listing",
+          "source": "https://pawscapes.com.au/cafes/camp-hill-cafe-and-bar-on-whites-hill"
+        }
+      ]
+    },
+    {
+      "id": "little-black-pug",
+      "type": "cafe",
+      "name": "Little Black Pug",
+      "description": "Dogs are welcome in two outdoor dining areas. Puppuccinos, dog biscuits and meatballs have been listed for pups, while diners mention plant-based breakfast choices. The published café number is for booking by text.",
+      "public_ratings": [
+        {
+          "stars": 4.8,
+          "review_count": 1710,
+          "platform": "Google",
+          "scope": "venue",
+          "source": "https://restaurantguru.com/Little-Black-Pug-Cafe-Mount-Gravatt"
+        }
+      ],
+      "comments": [
+        {
+          "text": "A visitor who brought their dog said staff took good care of the dog. Other reviewers highlight plant-based breakfast options.",
+          "kind": "review",
+          "source": "https://www.happycow.net/reviews/little-black-pug-mount-gravatt-171818"
+        },
+        {
+          "text": "The café says pets can join diners in its outdoor areas.",
+          "kind": "venue",
+          "source": "https://www.littleblackpug.com.au/"
+        }
+      ]
+    },
+    {
+      "id": "black-lab-coffee",
+      "type": "cafe",
+      "name": "Black Lab Coffee",
+      "description": "This Tarragindi coffee shop welcomes dogs in its outdoor seating area and supports animal rescue. Visitors mention friendly staff, dog treats and good coffee. Some found the house blend on the acidic side.",
+      "public_ratings": [
+        {
+          "stars": 4.5,
+          "review_count": 254,
+          "platform": "Google",
+          "scope": "venue",
+          "source": "https://wanderlog.com/place/details/3953703"
+        }
+      ],
+      "comments": [
+        {
+          "text": "Reviewers liked the coffee, friendly staff and treats for dogs. Some found the house coffee blend more acidic than they prefer.",
+          "kind": "review_summary",
+          "source": "https://wanderlog.com/place/details/3953703"
+        }
+      ]
+    },
+    {
+      "id": "lovewell-cafe",
+      "type": "cafe",
+      "name": "Lovewell Café",
+      "description": "Lovewell is at Mount Gravatt Lookout and lists bookable dog-friendly tables outside. A visitor placed these tables near the entrance. Reviews commonly mention the views over Brisbane.",
+      "public_ratings": [
+        {
+          "stars": 4.2,
+          "review_count": 1215,
+          "platform": "Google",
+          "scope": "venue",
+          "source": "https://menumap.com.au/venue/lovewell-cafe"
+        }
+      ],
+      "comments": [
+        {
+          "text": "A visitor noted that the dog-friendly seating is beside the entry. Reviews also highlight the lookout views.",
+          "kind": "review",
+          "source": "https://wanderlog.com/place/details/1458520/lovewell-caf%C3%A9"
+        },
+        {
+          "text": "The booking listing offers outdoor tables designated as dog-friendly.",
+          "kind": "venue",
+          "source": "https://www.opentable.com.au/restaurant/profile/164666?lang=en"
+        }
+      ]
+    },
+    {
+      "id": "mk-bower-cafe",
+      "type": "cafe",
+      "name": "MK Bower Cafe",
+      "description": "Leashed dogs can sit with diners in the shaded outdoor garden. The venue supplies water bowls, and a visitor reported plenty of shade and water on a hot day. Diners come for all-day breakfast and brunch.",
+      "public_ratings": [
+        {
+          "stars": 4.0,
+          "review_count": 242,
+          "platform": "Google",
+          "scope": "venue",
+          "source": "https://menumap.com.au/venue/mk-bower-cafe"
+        }
+      ],
+      "comments": [
+        {
+          "text": "A visitor reported plentiful water for their dog and good shade on a hot day, and liked the breakfast.",
+          "kind": "review",
+          "source": "https://au.localitybiz.com/22735261/mk-bower-cafe-stones-corner"
+        },
+        {
+          "text": "The café says leashed dogs can join diners in the garden and that it supplies water bowls.",
+          "kind": "venue",
+          "source": "https://mkbowercafe.com/dog-friendly-cafe-brisbane"
+        }
+      ]
+    },
+    {
+      "id": "the-smug-fig",
+      "type": "cafe",
+      "name": "The Smug Fig",
+      "description": "The Stones Corner café has dog-friendly outdoor seating in a sheltered, garden-style area. Visitors mention generous brunch portions, French toast and chicken waffles. Outdoor tables can fill up on weekends.",
+      "public_ratings": [
+        {
+          "stars": 4.3,
+          "review_count": 1150,
+          "platform": "Google",
+          "scope": "venue",
+          "source": "https://menumap.com.au/venue/the-smug-fig-kitchen-and-social"
+        }
+      ],
+      "comments": [
+        {
+          "text": "The venue confirms dog-friendly outdoor seating. Its review roundup highlights the sheltered garden feel and generous brunch portions.",
+          "kind": "venue",
+          "source": "https://smugfig.com/greenslopes"
+        },
+        {
+          "text": "Visitors mention French toast, chicken waffles and outdoor seating. The guide recommends arriving early on weekends for an outside table.",
+          "kind": "review_summary",
+          "source": "https://pawscapes.com.au/cafes/stones-corner-the-smug-fig-kitchen-and-social"
+        }
+      ]
+    },
+    {
+      "id": "snag-and-brown",
+      "type": "cafe",
+      "name": "Snag & Brown",
+      "description": "Dogs are welcome in the outdoor courtyard. A local directory describes a small fenced play area behind the café. Review summaries highlight the coffee, friendly staff and outdoor setting.",
+      "public_ratings": [
+        {
+          "stars": 4.6,
+          "review_count": 890,
+          "platform": "Google",
+          "scope": "venue",
+          "source": "https://restaurantguru.com/SNAG-and-BROWN-Greenslopes"
+        }
+      ],
+      "comments": [
+        {
+          "text": "Review summaries highlight the coffee, friendly service and a welcoming outdoor setting for dogs.",
+          "kind": "review_summary",
+          "source": "https://www.cylex-australia.com/company/snag---brown-23959236.html"
+        },
+        {
+          "text": "The directory reports that dogs can use a small fenced play area behind the café.",
+          "kind": "listing",
+          "source": "https://www.isitdogfriendly.com.au/venues/snag-and-brown-annerley"
+        }
+      ]
+    },
+    {
+      "id": "little-genovese",
+      "type": "cafe",
+      "name": "Little Genovese",
+      "description": "Dogs can join diners in the rear outdoor courtyard. A visitor reported that staff brought a water bowl and treats for the dogs, and liked the coffee and prompt service.",
+      "public_ratings": [
+        {
+          "stars": 4.9,
+          "review_count": 615,
+          "platform": "Google",
+          "scope": "venue",
+          "source": "https://restaurantguru.com/Little-Genovese-East-Brisbane"
+        }
+      ],
+      "comments": [
+        {
+          "text": "A visitor reported a dog bowl brought to the rear courtyard table and treats for the dogs. They also liked the coffee and prompt service.",
+          "kind": "review",
+          "source": "https://restaurantguru.com/Little-Genovese-East-Brisbane"
+        }
+      ]
+    },
+    {
+      "id": "todd-and-pup",
+      "type": "cafe",
+      "name": "Todd & Pup",
+      "description": "The outdoor deck welcomes dogs and has water bowls. Tourism Queensland lists puppuccinos and a dedicated dog menu. A visitor with a dog praised the care put into the food for pups.",
+      "public_ratings": [
+        {
+          "stars": 4.4,
+          "review_count": 885,
+          "platform": "Google",
+          "scope": "venue",
+          "source": "https://foodandwinewithlove.com.au/todd-and-pup-398-tarragindi-rd"
+        }
+      ],
+      "comments": [
+        {
+          "text": "A visitor who brings their dog to cafés said the food for dogs felt particularly well considered.",
+          "kind": "review",
+          "source": "https://restaurantguru.com/Todd-and-Pup-Moorooka"
+        },
+        {
+          "text": "Tourism Queensland lists puppuccinos, a dedicated dog menu and water bowls on the deck.",
+          "kind": "listing",
+          "source": "https://www.queensland.com/au/en/things-to-do/food-and-drink/restaurants-and-cafes/dog-friendly-cafes-brisbane"
+        }
+      ]
+    },
+    {
+      "id": "sassafras",
+      "type": "cafe",
+      "name": "Sassafras of Paddington",
+      "description": "Dogs can join diners in the courtyard garden, where the café advertises pupaccinos, dog biscuits and a dog menu. Reviewers liked the outdoor brunch setting and dietary options. Some reported slower service at busy times.",
+      "public_ratings": [
+        {
+          "stars": 4.4,
+          "review_count": 986,
+          "platform": "Google",
+          "scope": "venue",
+          "source": "https://wanderlog.com/place/details/1337598/sassafras-of-paddington"
+        }
+      ],
+      "comments": [
+        {
+          "text": "Reviewers liked the courtyard for brunch, dietary choices and treats for dogs. Some reported slower service at busy times.",
+          "kind": "review_summary",
+          "source": "https://wanderlog.com/place/details/1337598/sassafras-of-paddington"
+        },
+        {
+          "text": "The venue advertises dog biscuits, a dog menu and pupaccinos in its courtyard garden.",
+          "kind": "venue",
+          "source": "https://www.sassafrasofpaddington.com.au/about-us"
+        }
+      ]
+    }
+  ]
+}

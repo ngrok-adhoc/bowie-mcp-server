@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bowie Dockerfile review</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #f5f7f8; color: #18252d; font: 1rem/1.55 system-ui, sans-serif; }
+  main { width: min(100% - 3rem, 52rem); margin: 3rem auto; }
+  h1 { margin: 0 0 .65rem; font-size: clamp(2rem, 4vw, 2.6rem); line-height: 1.1; }
+  header { border-bottom: 2px solid #376377; padding-bottom: 1.25rem; }
+  h2 { margin: 0 0 .55rem; font-size: 1.2rem; }
+  section { margin-top: 1rem; padding: 1.15rem 1.35rem; background: #fff; border: 1px solid #d9e1e4; border-radius: .5rem; }
+  p, pre, ul { margin: .6rem 0 0; }
+  ul { padding-left: 1.25rem; }
+  li + li { margin-top: .4rem; }
+  code { overflow-wrap: anywhere; }
+  pre { padding: .75rem; background: #eaf0f3; border-radius: .25rem; overflow: auto; }
+  a { color: #21576e; }
+</style>
+<main>
+  <header>
+    <h1>Bowie Dockerfile review</h1>
+    <p>Keep <code>uv sync --locked --no-dev</code> at build time and launch Bowie directly with the interpreter installed in the image.</p>
+  </header>
+  <section>
+    <h2>Startup command</h2>
+    <pre><code>CMD ["/app/.venv/bin/python", "mcp_server.py"]</code></pre>
+    <p>The independent model reviewer recommended this one-line change. Astral documents <code>uv run</code> as a valid Docker command. Its FastAPI deployment example is the closer match for Bowie because it installs dependencies during the build and directly invokes a virtual environment executable. Compose already uses the same Python path for Bowie's health check. <a href="https://docs.astral.sh/uv/guides/integration/docker/#using-the-environment">Astral Docker guide</a> · <a href="https://docs.astral.sh/uv/guides/integration/fastapi/#deployment">Astral FastAPI deployment example</a></p>
+  </section>
+  <section>
+    <h2>Container checks</h2>
+    <p>The reviewer and I tested the launcher variants with networking disabled. Each successful command imported FastMCP from the image while running as UID <code>10001</code>.</p>
+    <ul>
+      <li><code>uv run --no-sync --no-cache python</code> used the built-in environment and ran Python as a child process.</li>
+      <li><code>uv run --no-sync python</code> exited when it tried to create <code>/.cache/uv</code>.</li>
+      <li><code>/app/.venv/bin/python</code> used the same environment and ran Python as PID 1.</li>
+    </ul>
+    <p>The current Dockerfile also passed the earlier Compose startup and graceful shutdown check. This review covers the launcher. The OAuth profile and cross-platform builds were outside its scope.</p>
+  </section>
+</main>
+</html>

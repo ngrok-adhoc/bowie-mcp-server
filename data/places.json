@@ -1,0 +1,1478 @@
+{
+  "places": [
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.5,
+          "review_count": 239,
+          "platform": "Google Maps",
+          "scope": "dog_enclosure",
+          "source": "https://pawscapes.com.au/parks/camp-hill-whites-hill-reserve-fenced-dog-park"
+        },
+        {
+          "stars": 4.5,
+          "review_count": 249,
+          "platform": "Google Maps",
+          "scope": "dog_enclosure"
+        },
+        {
+          "stars": 5,
+          "review_count": 5,
+          "platform": "DogPack",
+          "scope": "dog_enclosure",
+          "source": "https://www.dogpackapp.com/parks/australia/queensland/brisbane-city/boundary-rd-dog-park"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "Visitors highlight the large enclosure, separation by dog size and shade from mature mango trees.",
+          "kind": "review_summary",
+          "source": "https://pawscapes.com.au/parks/camp-hill-whites-hill-reserve-fenced-dog-park"
+        },
+        {
+          "text": "The local guide lists a drinking fountain, shelter, seating and waste bags.",
+          "kind": "listing",
+          "source": "https://www.brisbanedogwalkers.com.au/blog/whites-hill-reserve-dog-park-camp-hill-dog-park/"
+        },
+        {
+          "text": "Google Maps average 4.5 from 249 reviews (rounded up).",
+          "kind": "agent_report"
+        },
+        {
+          "text": "Council maps one off-leash area here. The Boundary Rd Dog Park pin is beside that enclosure.",
+          "kind": "listing",
+          "source": "https://data.brisbane.qld.gov.au/explore/dataset/park-dog-off-leash-areas/"
+        },
+        {
+          "text": "A DogPack reviewer mentions plenty of shade and seating, an obstacle course and parking across Boundary Road.",
+          "kind": "review",
+          "source": "https://www.dogpackapp.com/parks/australia/queensland/brisbane-city/boundary-rd-dog-park"
+        }
+      ],
+      "name": "Whites Hill Reserve (Boundary Rd Dog Park)",
+      "suburb": "Camp Hill",
+      "country": "Australia",
+      "address": "258 Boundary Road, Camp Hill QLD 4152",
+      "latitude": -27.51464,
+      "longitude": 153.074243,
+      "description": "Also listed as Boundary Rd Dog Park near Holland Park. Enter the fenced off-leash area from Boundary Road at the south-west corner of Whites Hill Reserve. Separate yards cater for large and small dogs. The enclosure has benches, shade from mature mango trees, drinking water, agility equipment and waste bags. Dogs stay on-leash on the reserve trails.",
+      "sources": [
+        "https://pawscapes.com.au/parks/camp-hill-whites-hill-reserve-fenced-dog-park",
+        "https://www.brisbanedogwalkers.com.au/blog/whites-hill-reserve-dog-park-camp-hill-dog-park/",
+        "https://www.brisbane.qld.gov.au/parks-and-recreation/bushland-and-wetlands/find-reserves-and-forests/whites-hill-reserve",
+        "https://data.brisbane.qld.gov.au/explore/dataset/park-dog-off-leash-areas/",
+        "https://www.dogpackapp.com/parks/australia/queensland/brisbane-city/boundary-rd-dog-park"
+      ],
+      "drinking_water": true,
+      "id": "whites-hill-reserve",
+      "type": "park"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.5,
+          "review_count": 77,
+          "platform": "Google Maps",
+          "scope": "whole_park",
+          "source": "https://wanderlog.com/place/details/12311746"
+        },
+        {
+          "stars": 4.5,
+          "review_count": 87,
+          "platform": "Google Maps",
+          "scope": "whole_park"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "A visitor appreciated parking on both sides, public toilets and plenty of covered seating and barbecue space. These observations concern the wider park.",
+          "kind": "review",
+          "source": "https://wanderlog.com/place/details/12311746"
+        },
+        {
+          "text": "The directory lists shade and water for the park. It does not establish that water is available in the off-leash area itself.",
+          "kind": "listing",
+          "source": "https://www.findadogpark.com.au/councils/brisbane-qld"
+        },
+        {
+          "text": "Google Maps average 4.5 from 87 reviews for the park overall, not just the off-leash area.",
+          "kind": "agent_report"
+        }
+      ],
+      "name": "Glindemann Park",
+      "suburb": "Holland Park West",
+      "country": "Australia",
+      "address": "1208 Logan Road, Holland Park West QLD 4121",
+      "latitude": -27.523875,
+      "longitude": 153.06779,
+      "description": "Glindemann has an unfenced off-leash area. The wider park has shady spots, undercover seating, barbecues and public toilets. A dog-bowl fountain is mapped elsewhere in the park, so plan to bring water into the off-leash area.",
+      "sources": [
+        "https://wanderlog.com/place/details/12311746",
+        "https://www.findadogpark.com.au/councils/brisbane-qld"
+      ],
+      "id": "glindemann-park",
+      "type": "park"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.4,
+          "review_count": 237,
+          "platform": "Google Maps",
+          "scope": "dog_enclosure",
+          "source": "https://pawscapes.com.au/parks/tarragindi-shaftesbury-street-big-and-small-dog-parks"
+        },
+        {
+          "stars": 4.2,
+          "review_count": 5,
+          "platform": "DogPack",
+          "scope": "dog_enclosure",
+          "source": "https://www.dogpackapp.com/parks/australia/queensland/brisbane-city/shaftesbury-street-dog-park"
+        },
+        {
+          "stars": 4.4,
+          "review_count": 238,
+          "platform": "Google Maps",
+          "scope": "dog_enclosure"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "A dog owner reported a fountain in each enclosure, shaded seating in the larger yard and toilets nearby.",
+          "kind": "review",
+          "source": "https://www.dogpackapp.com/parks/australia/queensland/brisbane-city/shaftesbury-street-dog-park"
+        },
+        {
+          "text": "Visitors mention friendly owners, separate dog yards and a playground nearby. The guide says weekend mornings can draw a crowd.",
+          "kind": "review_summary",
+          "source": "https://pawscapes.com.au/parks/tarragindi-shaftesbury-street-big-and-small-dog-parks"
+        },
+        {
+          "text": "Google Maps average 4.4 from 238 reviews (Big and Small Dog Parks listing).",
+          "kind": "agent_report"
+        }
+      ],
+      "name": "Shaftesbury Street Park",
+      "suburb": "Tarragindi",
+      "country": "Australia",
+      "address": "59 Shaftesbury Street, Tarragindi QLD 4121",
+      "latitude": -27.519466,
+      "longitude": 153.041468,
+      "description": "Separate fenced and double-gated yards cater for big and small dogs. Visitors report a drinking fountain in each yard and shaded seating in the larger one. Toilets and a playground are close by. Weekend mornings can get busy.",
+      "sources": [
+        "https://www.dogpackapp.com/parks/australia/queensland/brisbane-city/shaftesbury-street-dog-park",
+        "https://pawscapes.com.au/parks/tarragindi-shaftesbury-street-big-and-small-dog-parks"
+      ],
+      "drinking_water": true,
+      "id": "shaftesbury-street-park",
+      "type": "park"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.5,
+          "review_count": 11,
+          "platform": "Google Maps",
+          "scope": "dog_enclosure",
+          "source": "https://pawscapes.com.au/parks/upper-mount-gravatt-abbeville-street-park-fenced-dog-park"
+        },
+        {
+          "stars": 4.3,
+          "review_count": 174,
+          "platform": "Google Maps",
+          "scope": "whole_park",
+          "source": "https://wanderlog.com/place/details/3953769/abbeville-street-park"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "Visitors liked the upgraded small-dog section and the loop around the wider park. Limited seating and a lack of toilets came up in comments.",
+          "kind": "review_summary",
+          "source": "https://wanderlog.com/place/details/3953769/abbeville-street-park"
+        },
+        {
+          "text": "The guide reports water stations and mature shade, but advises carrying water in case the stations are unavailable.",
+          "kind": "listing",
+          "source": "https://pawscapes.com.au/parks/upper-mount-gravatt-abbeville-street-park-fenced-dog-park"
+        },
+        {
+          "text": "Google Maps average 4.5 from 11 reviews (small sample).",
+          "kind": "agent_report"
+        }
+      ],
+      "name": "Abbeville Street Park",
+      "suburb": "Upper Mount Gravatt",
+      "country": "Australia",
+      "address": "41 Abbeville Street, Upper Mount Gravatt QLD 4122",
+      "latitude": -27.544648,
+      "longitude": 153.089507,
+      "description": "The fenced area has a separate small-dog section, shade from mature trees and dog water stations. Visitors mention the walking loop around the wider park. A local guide advises bringing water as a backup, and reviewers report limited seating and a lack of toilets.",
+      "sources": [
+        "https://wanderlog.com/place/details/3953769/abbeville-street-park",
+        "https://pawscapes.com.au/parks/upper-mount-gravatt-abbeville-street-park-fenced-dog-park"
+      ],
+      "drinking_water": true,
+      "id": "abbeville-street-park",
+      "type": "park"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.1,
+          "review_count": 101,
+          "platform": "Google Maps",
+          "scope": "dog_enclosure",
+          "source": "https://pawscapes.com.au/parks/greenslopes-ekibin-park-east-fenced-dog-park"
+        },
+        {
+          "stars": 4.1,
+          "review_count": 102,
+          "platform": "Google Maps",
+          "scope": "dog_enclosure"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "Review themes include tree shade, open space and secure gates. Visitors also mention worn or muddy ground and crowding at busy times.",
+          "kind": "review_summary",
+          "source": "https://dogparkfinder.com.au/parks/ekibin-park-east-fenced-dog-park-greenslopes-qld/"
+        },
+        {
+          "text": "The guide reports a drinking bubbler and a double-gated entry, and says bare earth can become muddy after heavy rain.",
+          "kind": "listing",
+          "source": "https://pawscapes.com.au/parks/greenslopes-ekibin-park-east-fenced-dog-park"
+        },
+        {
+          "text": "Google Maps average 4.1 from 102 reviews.",
+          "kind": "agent_report"
+        }
+      ],
+      "name": "Ekibin Park East",
+      "suburb": "Greenslopes",
+      "country": "Australia",
+      "address": "140 Ridge Street, Greenslopes QLD 4120",
+      "latitude": -27.508002,
+      "longitude": 153.040855,
+      "description": "The fenced dog area is on the Victoria Terrace side of the park. A local guide lists a double-gated entrance, shade, seating and a bubbler. Visitors mention bare or worn ground that can get muddy after heavy rain.",
+      "sources": [
+        "https://dogparkfinder.com.au/parks/ekibin-park-east-fenced-dog-park-greenslopes-qld/",
+        "https://pawscapes.com.au/parks/greenslopes-ekibin-park-east-fenced-dog-park"
+      ],
+      "drinking_water": true,
+      "id": "ekibin-park-east",
+      "type": "park"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.3,
+          "review_count": 65,
+          "platform": "Google Maps",
+          "scope": "dog_enclosure",
+          "source": "https://dogparkfinder.com.au/parks/wembley-park-dog-park-coorparoo-qld/"
+        },
+        {
+          "stars": 4.3,
+          "review_count": 73,
+          "platform": "Google Maps",
+          "scope": "dog_enclosure"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "Reviewers mention roomy, shady grounds and friendly dogs. Some report limited access to taps and crowding at peak times.",
+          "kind": "review_summary",
+          "source": "https://dogparkfinder.com.au/parks/wembley-park-dog-park-coorparoo-qld/"
+        },
+        {
+          "text": "Google Maps average 4.3 from 73 reviews.",
+          "kind": "agent_report"
+        }
+      ],
+      "name": "Wembley Park",
+      "suburb": "Coorparoo",
+      "country": "Australia",
+      "address": "71 Jackson Street, Coorparoo QLD 4151",
+      "latitude": -27.489355,
+      "longitude": 153.063462,
+      "description": "The fenced Coorparoo enclosure has room to run, shade and agility equipment. Council maps a drinking fountain and tap, while some visitors report limited access to taps. The park can get busy at peak times.",
+      "sources": [
+        "https://dogparkfinder.com.au/parks/wembley-park-dog-park-coorparoo-qld/"
+      ],
+      "drinking_water": true,
+      "id": "wembley-park",
+      "type": "park"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.8,
+          "review_count": 6,
+          "platform": "DogPack",
+          "scope": "dog_enclosure",
+          "source": "https://www.dogpackapp.com/parks/australia/queensland/brisbane-city/joe-bradfield-dog-park"
+        },
+        {
+          "stars": 3.5,
+          "review_count": 2,
+          "platform": "Google Maps",
+          "scope": "dog_enclosure"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "A regular said the fenced yard can get busy and large and small dogs use the same space.",
+          "kind": "review",
+          "source": "https://www.dogpackapp.com/parks/australia/queensland/brisbane-city/joe-bradfield-dog-park"
+        },
+        {
+          "text": "DogPack lists a water fountain, a double-gated entrance and nearby parking.",
+          "kind": "listing",
+          "source": "https://www.dogpackapp.com/parks/australia/queensland/brisbane-city/joe-bradfield-dog-park"
+        },
+        {
+          "text": "Google Maps 3.5 from only 2 reviews (rounded up). Little review data; drinking water per Bowie notes.",
+          "kind": "agent_report"
+        }
+      ],
+      "name": "Joe Bradfield Centre Park",
+      "suburb": "Carina",
+      "country": "Australia",
+      "address": "28 Nyrang Street, Carina QLD 4152",
+      "latitude": -27.491864,
+      "longitude": 153.091705,
+      "description": "The Carina enclosure has a double-gated entrance, a drinking fountain and parking nearby. A regular reports that large and small dogs share the yard and it can fill up at busy times.",
+      "sources": [
+        "https://www.dogpackapp.com/parks/australia/queensland/brisbane-city/joe-bradfield-dog-park"
+      ],
+      "drinking_water": true,
+      "id": "joe-bradfield-centre-park",
+      "type": "park"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.5,
+          "review_count": 179,
+          "platform": "Google Maps",
+          "scope": "whole_park",
+          "source": "https://funtivities.com.au/activities/perth-street-park"
+        },
+        {
+          "stars": 4.0,
+          "review_count": 9,
+          "platform": "Google Maps",
+          "scope": "dog_enclosure"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "Visitors mention shade, clean grounds and the separation of dog and family areas. Some describe taps as limited, so water access may depend on where you enter.",
+          "kind": "review_summary",
+          "source": "https://dogparkfinder.com.au/parks/perth-street-park-camp-hill-qld/"
+        },
+        {
+          "text": "Camp Hill Dog Park listing at 78 Perth St: 4.0 from 9 reviews. Whole Perth Street Park: 4.5 from 179 reviews. Reviews mention separate big and small dog areas, water bowls, and some patchy grass. Some reviewers say the dog area is dusty and not well kept, so check conditions.",
+          "kind": "agent_report"
+        }
+      ],
+      "name": "Perth Street Park",
+      "suburb": "Camp Hill",
+      "country": "Australia",
+      "address": "74 Perth Street, Camp Hill QLD 4152",
+      "latitude": -27.486162,
+      "longitude": 153.075963,
+      "description": "The wider park has shade and separate areas for family recreation and off-leash dogs. Council maps a drinking fountain and dog bowl in the enclosure. Some visitors report limited access to taps.",
+      "sources": [
+        "https://dogparkfinder.com.au/parks/perth-street-park-camp-hill-qld/",
+        "https://funtivities.com.au/activities/perth-street-park"
+      ],
+      "drinking_water": true,
+      "id": "perth-street-park",
+      "type": "park"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.5,
+          "review_count": 2,
+          "platform": "DogPack",
+          "scope": "dog_enclosure",
+          "source": "https://www.dogpackapp.com/parks/australia/queensland/mansfield"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "The Tones Road enclosure listing describes a short uphill walk from parking. Reviews on the listing mention morning sun in the dog area.",
+          "kind": "review_summary",
+          "source": "https://www.dogpackapp.com/parks/australia/queensland/mansfield"
+        },
+        {
+          "text": "A local guide reports a dog bubbler, agility equipment and waste bags at the Tones Road site.",
+          "kind": "listing",
+          "source": "https://alisoncookephotography.com/dog-parks-in-brisbane/"
+        }
+      ],
+      "name": "Ron Woolley Place",
+      "suburb": "Mansfield",
+      "country": "Australia",
+      "address": "81 Tones Road, Mansfield QLD 4122",
+      "latitude": -27.530774,
+      "longitude": 153.110019,
+      "description": "The Tones Road fenced enclosure has a dog bubbler, agility equipment and waste bags. A local listing describes a short uphill walk from the parking area, and visitors mention morning sun in the yard.",
+      "sources": [
+        "https://www.dogpackapp.com/parks/australia/queensland/mansfield",
+        "https://alisoncookephotography.com/dog-parks-in-brisbane/"
+      ],
+      "drinking_water": true,
+      "id": "ron-woolley-place",
+      "type": "park"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.3,
+          "review_count": 149,
+          "platform": "Google Maps",
+          "scope": "whole_park",
+          "source": "https://wanderlog.com/place/details/4445276/woolloongabba-rotary-park"
+        },
+        {
+          "stars": 4.3,
+          "review_count": 155,
+          "platform": "Google Maps",
+          "scope": "whole_park"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "Visitors liked the shade and tidy facilities. Some found parts of the wider park poorly lit at night.",
+          "kind": "review_summary",
+          "source": "https://wanderlog.com/place/details/4445276/woolloongabba-rotary-park"
+        },
+        {
+          "text": "Review themes include open space and separate family areas. Some visitors report muddy ground or limited access to taps.",
+          "kind": "review_summary",
+          "source": "https://dogparkfinder.com.au/parks/woolloongabba-rotary-park-east-brisbane-qld/"
+        },
+        {
+          "text": "Google Maps 4.3 from 155 reviews (park overall). Reviews mention a fenced off-leash dog area, water for dogs, waste bags and bins, public toilets, and BBQs. Parking is metered.",
+          "kind": "agent_report"
+        }
+      ],
+      "name": "Woolloongabba Rotary Park",
+      "suburb": "East Brisbane",
+      "country": "Australia",
+      "address": "19 Camberwell Street, East Brisbane QLD 4169",
+      "latitude": -27.490292,
+      "longitude": 153.042768,
+      "description": "The park has a fenced off-leash area beside separate family recreation spaces. Visitors mention shade and open ground, with muddy patches and limited tap access at times. Parts of the wider park can be dark at night.",
+      "sources": [
+        "https://wanderlog.com/place/details/4445276/woolloongabba-rotary-park",
+        "https://dogparkfinder.com.au/parks/woolloongabba-rotary-park-east-brisbane-qld/"
+      ],
+      "drinking_water": true,
+      "id": "woolloongabba-rotary-park",
+      "type": "park"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [],
+      "research_notes": [
+        {
+          "text": "The dog park listing describes one shared yard with a bench by the dog facilities.",
+          "kind": "listing",
+          "source": "https://mail.findadogpark.com.au/queensland/wishart/berkshire-crescent-park-fenced-dog-park"
+        },
+        {
+          "text": "Council has scheduled new gates, seating and turf works for February to May 2027.",
+          "kind": "listing",
+          "source": "https://www.brisbane.qld.gov.au/parks-and-recreation/parks-and-greenspaces/off-leash-dog-parks"
+        }
+      ],
+      "name": "Berkshire Crescent Park",
+      "suburb": "Wishart",
+      "country": "Australia",
+      "address": "17 Berkshire Crescent, Wishart QLD 4122",
+      "latitude": -27.548759,
+      "longitude": 153.099246,
+      "description": "A single fenced off-leash yard with a bench, water tap and waste bags. Council lists gate, seating and turf works from 1 February to 1 May 2027, with the dog area scheduled to stay open.",
+      "sources": [
+        "https://data.brisbane.qld.gov.au/explore/dataset/park-dog-off-leash-areas/",
+        "https://data.brisbane.qld.gov.au/explore/dataset/park-drinking-fountain-tap-locations/",
+        "https://mail.findadogpark.com.au/queensland/wishart/berkshire-crescent-park-fenced-dog-park",
+        "https://www.brisbane.qld.gov.au/parks-and-recreation/parks-and-greenspaces/off-leash-dog-parks"
+      ],
+      "drinking_water": true,
+      "id": "berkshire-crescent-park",
+      "type": "park"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.1,
+          "review_count": 9,
+          "platform": "Google Maps",
+          "scope": "dog_enclosure",
+          "source": "https://pawscapes.com.au/parks/carindale-recreation-reserve-fenced-dog-park"
+        },
+        {
+          "stars": 4.6,
+          "review_count": 557,
+          "platform": "Google Maps",
+          "scope": "whole_park",
+          "source": "https://dogparkfinder.com.au/parks/carindale-recreation-reserve-qld/"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "The dog enclosure listing reports double gates and shaded places to sit.",
+          "kind": "listing",
+          "source": "https://pawscapes.com.au/parks/carindale-recreation-reserve-fenced-dog-park"
+        },
+        {
+          "text": "The wider reserve's reviews also cover family facilities such as the playground.",
+          "kind": "listing",
+          "source": "https://dogparkfinder.com.au/parks/carindale-recreation-reserve-qld/"
+        }
+      ],
+      "name": "Carindale Recreation Reserve",
+      "suburb": "Carindale",
+      "country": "Australia",
+      "address": "27 Cadogan Street, Carindale QLD 4152",
+      "latitude": -27.498246,
+      "longitude": 153.109536,
+      "description": "Enter the large fenced off-leash area from Cadogan Street. Local listings report shaded seating and parking. Council maps a drinking fountain with a dog bowl inside the enclosure.",
+      "sources": [
+        "https://data.brisbane.qld.gov.au/explore/dataset/park-dog-off-leash-areas/",
+        "https://data.brisbane.qld.gov.au/explore/dataset/park-drinking-fountain-tap-locations/",
+        "https://pawscapes.com.au/parks/carindale-recreation-reserve-fenced-dog-park",
+        "https://dogparkfinder.com.au/parks/carindale-recreation-reserve-qld/"
+      ],
+      "drinking_water": true,
+      "id": "carindale-recreation-reserve",
+      "type": "park"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.3,
+          "review_count": 120,
+          "platform": "Google Maps",
+          "scope": "dog_enclosure",
+          "source": "https://pawscapes.com.au/parks/norman-park-off-leash-dog-park"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "Find a Dog Park describes a narrow enclosure with a double-gated entrance and seating among shady trees.",
+          "kind": "listing",
+          "source": "https://www.findadogpark.com.au/queensland/norman-park/vectis-street-park-fenced-dog-park"
+        }
+      ],
+      "name": "Vectis Street Park",
+      "suburb": "Norman Park",
+      "country": "Australia",
+      "address": "27 Scott Street, Norman Park QLD 4170",
+      "latitude": -27.480131,
+      "longitude": 153.058067,
+      "description": "This fenced off-leash yard off Scott Street is also listed as Norman Park Off Leash Dog Park. It has seating, shade trees, agility equipment, drinking water and lighting. Dogs of all sizes share the yard.",
+      "sources": [
+        "https://data.brisbane.qld.gov.au/explore/dataset/park-dog-off-leash-areas/",
+        "https://data.brisbane.qld.gov.au/explore/dataset/park-drinking-fountain-tap-locations/",
+        "https://www.findadogpark.com.au/queensland/norman-park/vectis-street-park-fenced-dog-park",
+        "https://pawscapes.com.au/parks/norman-park-off-leash-dog-park"
+      ],
+      "drinking_water": true,
+      "id": "vectis-street-park",
+      "type": "park"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.2,
+          "review_count": 140,
+          "platform": "Google Maps",
+          "scope": "dog_enclosure",
+          "source": "https://pawscapes.com.au/parks/salisbury-recreation-reserve-fenced-dog-park"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "The local guide lists seating under a shelter, a water tap and a double-gated entry.",
+          "kind": "listing",
+          "source": "https://www.findadogpark.com.au/queensland/salisbury/salisbury-recreation-reserve-fenced-dog-park"
+        }
+      ],
+      "name": "Salisbury Recreation Reserve",
+      "suburb": "Salisbury",
+      "country": "Australia",
+      "address": "1 Wincott Street, Salisbury QLD 4107",
+      "latitude": -27.546469,
+      "longitude": 153.037347,
+      "description": "The fenced off-leash area near Wincott Street and Evans Road has separate large- and small-dog yards, covered seating, drinking water, lighting and agility equipment.",
+      "sources": [
+        "https://data.brisbane.qld.gov.au/explore/dataset/park-dog-off-leash-areas/",
+        "https://data.brisbane.qld.gov.au/explore/dataset/park-drinking-fountain-tap-locations/",
+        "https://www.findadogpark.com.au/queensland/salisbury/salisbury-recreation-reserve-fenced-dog-park",
+        "https://pawscapes.com.au/parks/salisbury-recreation-reserve-fenced-dog-park"
+      ],
+      "drinking_water": true,
+      "id": "salisbury-recreation-reserve",
+      "type": "park"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.2,
+          "review_count": 43,
+          "platform": "Google Maps",
+          "scope": "dog_enclosure",
+          "source": "https://pawscapes.com.au/parks/carindale-newbury-place-park-fenced-dog-park"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "The guide reports a covered shelter with seating and street parking off Cribb Road.",
+          "kind": "listing",
+          "source": "https://pawscapes.com.au/parks/carindale-newbury-place-park-fenced-dog-park"
+        },
+        {
+          "text": "Council maps a drinking fountain with a dog bowl within the off-leash area.",
+          "kind": "listing",
+          "source": "https://data.brisbane.qld.gov.au/explore/dataset/park-drinking-fountain-tap-locations/"
+        }
+      ],
+      "name": "Newbury Place Park",
+      "suburb": "Carindale",
+      "country": "Australia",
+      "address": "61A Cribb Road, Carindale QLD 4152",
+      "latitude": -27.524453,
+      "longitude": 153.119986,
+      "description": "A fenced off-leash area with a separate small-dog yard, covered seating, scattered shade trees, drinking water, lighting and agility equipment.",
+      "sources": [
+        "https://data.brisbane.qld.gov.au/explore/dataset/park-dog-off-leash-areas/",
+        "https://data.brisbane.qld.gov.au/explore/dataset/park-drinking-fountain-tap-locations/",
+        "https://pawscapes.com.au/parks/carindale-newbury-place-park-fenced-dog-park"
+      ],
+      "drinking_water": true,
+      "id": "newbury-place-park",
+      "type": "park"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.6,
+          "review_count": 84,
+          "platform": "Google Maps",
+          "scope": "dog_enclosure",
+          "source": "https://pawscapes.com.au/parks/carindale-preston-road-park-fenced-dog-park"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "The enclosure listing reports bench seating and water for dogs, with parking off Meadowlands Road.",
+          "kind": "listing",
+          "source": "https://pawscapes.com.au/parks/carindale-preston-road-park-fenced-dog-park"
+        },
+        {
+          "text": "Council lists the off-leash area under Preston Road Park, Carina.",
+          "kind": "listing",
+          "source": "https://www.brisbane.qld.gov.au/parks-and-recreation/parks-and-greenspaces/off-leash-dog-parks"
+        }
+      ],
+      "name": "Preston Road Park",
+      "suburb": "Carina",
+      "country": "Australia",
+      "address": "145 Meadowlands Road, Carindale QLD 4152",
+      "latitude": -27.492992,
+      "longitude": 153.117114,
+      "description": "The dog enclosure is accessible from Meadowlands Road. Its fenced off-leash yards have separate areas for large and small dogs, benches, some tree shade, dog drinking fountains, lighting and agility equipment.",
+      "sources": [
+        "https://data.brisbane.qld.gov.au/explore/dataset/park-dog-off-leash-areas/",
+        "https://data.brisbane.qld.gov.au/explore/dataset/park-drinking-fountain-tap-locations/",
+        "https://pawscapes.com.au/parks/carindale-preston-road-park-fenced-dog-park",
+        "https://www.brisbane.qld.gov.au/parks-and-recreation/parks-and-greenspaces/off-leash-dog-parks"
+      ],
+      "drinking_water": true,
+      "id": "preston-road-park",
+      "type": "park"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.2,
+          "review_count": 113,
+          "platform": "Google Maps",
+          "scope": "venue",
+          "source": "https://restaurantguru.com/Cafe-and-Bar-on-Whites-Hill-Camp-Hill-Queensland"
+        },
+        {
+          "stars": 4.2,
+          "review_count": 121,
+          "platform": "Google Maps",
+          "scope": "venue"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "One visitor liked the coffee and toasted sandwich and found the outdoor area a comfortable place to sit with a large dog.",
+          "kind": "review",
+          "source": "https://restaurantguru.com/Cafe-and-Bar-on-Whites-Hill-Camp-Hill-Queensland"
+        },
+        {
+          "text": "The guide reports that staff often put out water bowls and may make a puppuccino on request.",
+          "kind": "listing",
+          "source": "https://pawscapes.com.au/cafes/camp-hill-cafe-and-bar-on-whites-hill"
+        },
+        {
+          "text": "Google Maps average 4.2 from 121 reviews.",
+          "kind": "agent_report"
+        }
+      ],
+      "name": "Cafe & Bar on Whites Hill",
+      "suburb": "Camp Hill",
+      "country": "Australia",
+      "address": "258 Boundary Road, Camp Hill QLD 4152",
+      "latitude": -27.509031,
+      "longitude": 153.077724,
+      "phone": "+61408424668",
+      "website": "https://whiteshillcafe.com.au/",
+      "description": "The café has dog-friendly outdoor seating beside Whites Hill Reserve, with room for a large dog under the table. A local guide reports water bowls are usually available and staff may make a puppuccino on request. One visitor liked the coffee and toasted sandwich.",
+      "sources": [
+        "https://whiteshillcafe.com.au/",
+        "https://whiteshillcafe.com.au/contact-us",
+        "https://restaurantguru.com/Cafe-and-Bar-on-Whites-Hill-Camp-Hill-Queensland",
+        "https://pawscapes.com.au/cafes/camp-hill-cafe-and-bar-on-whites-hill"
+      ],
+      "dog_access": "outdoor",
+      "id": "whites-hill-cafe",
+      "type": "cafe"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.8,
+          "review_count": 1710,
+          "platform": "Google Maps",
+          "scope": "venue",
+          "source": "https://restaurantguru.com/Little-Black-Pug-Cafe-Mount-Gravatt"
+        },
+        {
+          "stars": 4.8,
+          "review_count": 1733,
+          "platform": "Google Maps",
+          "scope": "venue"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "A visitor who brought their dog said staff took good care of the dog. Other reviewers highlight plant-based breakfast options.",
+          "kind": "review",
+          "source": "https://www.happycow.net/reviews/little-black-pug-mount-gravatt-171818"
+        },
+        {
+          "text": "The café says pets can join diners in its outdoor areas.",
+          "kind": "venue",
+          "source": "https://www.littleblackpug.com.au/"
+        },
+        {
+          "text": "Google Maps average 4.8 from 1,733 reviews.",
+          "kind": "agent_report"
+        }
+      ],
+      "name": "Little Black Pug",
+      "suburb": "Mount Gravatt",
+      "country": "Australia",
+      "address": "6/1297 Logan Road, Mount Gravatt QLD 4122",
+      "latitude": -27.53442,
+      "longitude": 153.07474,
+      "phone": "+61435259677",
+      "website": "https://www.littleblackpug.com.au/",
+      "description": "Dogs are welcome in two outdoor dining areas. Puppuccinos, dog biscuits and meatballs have been listed for pups, while diners mention plant-based breakfast choices. The published café number is for booking by text.",
+      "sources": [
+        "https://www.littleblackpug.com.au/",
+        "https://www.queensland.com/au/en/things-to-do/food-and-drink/restaurants-and-cafes/dog-friendly-cafes-brisbane",
+        "https://www.happycow.net/reviews/little-black-pug-mount-gravatt-171818",
+        "https://restaurantguru.com/Little-Black-Pug-Cafe-Mount-Gravatt"
+      ],
+      "dog_access": "outdoor_only",
+      "puppuccino": true,
+      "id": "little-black-pug",
+      "type": "cafe"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.5,
+          "review_count": 254,
+          "platform": "Google Maps",
+          "scope": "venue",
+          "source": "https://wanderlog.com/place/details/3953703"
+        },
+        {
+          "stars": 4.5,
+          "review_count": 257,
+          "platform": "Google Maps",
+          "scope": "venue"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "Reviewers liked the coffee, friendly staff and treats for dogs. Some found the house coffee blend more acidic than they prefer.",
+          "kind": "review_summary",
+          "source": "https://wanderlog.com/place/details/3953703"
+        },
+        {
+          "text": "Google Maps average 4.5 from 257 reviews (rounded up).",
+          "kind": "agent_report"
+        }
+      ],
+      "name": "Black Lab Coffee",
+      "suburb": "Tarragindi",
+      "country": "Australia",
+      "address": "6/11 Kuring Gai Avenue, Tarragindi QLD 4121",
+      "latitude": -27.526635,
+      "longitude": 153.055309,
+      "phone": "+61474472874",
+      "website": "https://blacklabcoffee.com.au/",
+      "description": "This Tarragindi coffee shop welcomes dogs in its outdoor seating area and supports animal rescue. Visitors mention friendly staff, dog treats and good coffee. Some found the house blend on the acidic side.",
+      "sources": [
+        "https://blacklabcoffee.com.au/",
+        "https://blacklabcoffee.com.au/pages/contact-us",
+        "https://www.isitdogfriendly.com.au/venues/black-lab-coffee-tarragindi",
+        "https://wanderlog.com/place/details/3953703"
+      ],
+      "dog_access": "outdoor",
+      "id": "black-lab-coffee",
+      "type": "cafe"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.2,
+          "review_count": 1215,
+          "platform": "Google Maps",
+          "scope": "venue",
+          "source": "https://menumap.com.au/venue/lovewell-cafe"
+        },
+        {
+          "stars": 4.2,
+          "review_count": 1216,
+          "platform": "Google Maps",
+          "scope": "venue"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "A visitor noted that the dog-friendly seating is beside the entry. Reviews also highlight the lookout views.",
+          "kind": "review",
+          "source": "https://wanderlog.com/place/details/1458520/lovewell-caf%C3%A9"
+        },
+        {
+          "text": "The booking listing offers outdoor tables designated as dog-friendly.",
+          "kind": "venue",
+          "source": "https://www.opentable.com.au/restaurant/profile/164666?lang=en"
+        },
+        {
+          "text": "Google Maps average 4.2 from 1,216 reviews.",
+          "kind": "agent_report"
+        }
+      ],
+      "name": "Lovewell Café",
+      "suburb": "Mount Gravatt",
+      "country": "Australia",
+      "address": "185 Mount Gravatt Outlook Drive, Mount Gravatt QLD 4122",
+      "latitude": -27.543672,
+      "longitude": 153.070128,
+      "phone": "+61734203168",
+      "website": "https://lovewell.com.au/",
+      "description": "Lovewell is at Mount Gravatt Lookout and lists bookable dog-friendly tables outside. A visitor placed these tables near the entrance. Reviews commonly mention the views over Brisbane.",
+      "sources": [
+        "https://lovewell.com.au/",
+        "https://www.opentable.com.au/restaurant/profile/164666?lang=en",
+        "https://wanderlog.com/place/details/1458520/lovewell-caf%C3%A9",
+        "https://menumap.com.au/venue/lovewell-cafe"
+      ],
+      "dog_access": "outdoor",
+      "id": "lovewell-cafe",
+      "type": "cafe"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.0,
+          "review_count": 242,
+          "platform": "Google Maps",
+          "scope": "venue",
+          "source": "https://menumap.com.au/venue/mk-bower-cafe"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "A visitor reported plentiful water for their dog and good shade on a hot day, and liked the breakfast.",
+          "kind": "review",
+          "source": "https://au.localitybiz.com/22735261/mk-bower-cafe-stones-corner"
+        },
+        {
+          "text": "The café says leashed dogs can join diners in the garden and that it supplies water bowls.",
+          "kind": "venue",
+          "source": "https://mkbowercafe.com/dog-friendly-cafe-brisbane"
+        },
+        {
+          "text": "Google Maps average 4.0 from 242 reviews.",
+          "kind": "agent_report"
+        }
+      ],
+      "name": "MK Bower Cafe",
+      "suburb": "Stones Corner",
+      "country": "Australia",
+      "address": "433 Logan Road, Stones Corner QLD 4120",
+      "latitude": -27.501615,
+      "longitude": 153.045819,
+      "phone": "+61494659306",
+      "website": "https://mkbowercafe.com/dog-friendly-cafe-brisbane",
+      "description": "Leashed dogs can sit with diners in the shaded outdoor garden. The venue supplies water bowls, and a visitor reported plenty of shade and water on a hot day. Diners come for all-day breakfast and brunch.",
+      "sources": [
+        "https://mkbowercafe.com/dog-friendly-cafe-brisbane",
+        "https://mkbowercafe.com/contact",
+        "https://au.localitybiz.com/22735261/mk-bower-cafe-stones-corner",
+        "https://menumap.com.au/venue/mk-bower-cafe"
+      ],
+      "dog_access": "outdoor",
+      "id": "mk-bower-cafe",
+      "type": "cafe"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.3,
+          "review_count": 1150,
+          "platform": "Google Maps",
+          "scope": "venue",
+          "source": "https://menumap.com.au/venue/the-smug-fig-kitchen-and-social"
+        },
+        {
+          "stars": 4.3,
+          "review_count": 1287,
+          "platform": "Google Maps",
+          "scope": "venue"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "The venue confirms dog-friendly outdoor seating. Its review roundup highlights the sheltered garden feel and generous brunch portions.",
+          "kind": "venue",
+          "source": "https://smugfig.com/greenslopes"
+        },
+        {
+          "text": "Visitors mention French toast, chicken waffles and outdoor seating. The guide recommends arriving early on weekends for an outside table.",
+          "kind": "review_summary",
+          "source": "https://pawscapes.com.au/cafes/stones-corner-the-smug-fig-kitchen-and-social"
+        },
+        {
+          "text": "Google Maps average 4.3 from 1,287 reviews.",
+          "kind": "agent_report"
+        }
+      ],
+      "name": "The Smug Fig",
+      "suburb": "Stones Corner",
+      "country": "Australia",
+      "address": "7 Jeavons Lane, Stones Corner QLD 4120",
+      "latitude": -27.500607,
+      "longitude": 153.045112,
+      "phone": "+61494625878",
+      "website": "https://smugfig.com/greenslopes",
+      "description": "The Stones Corner café has dog-friendly outdoor seating in a sheltered, garden-style area. Visitors mention generous brunch portions, French toast and chicken waffles. Outdoor tables can fill up on weekends.",
+      "sources": [
+        "https://smugfig.com/greenslopes",
+        "https://pawscapes.com.au/cafes/stones-corner-the-smug-fig-kitchen-and-social",
+        "https://menumap.com.au/venue/the-smug-fig-kitchen-and-social"
+      ],
+      "dog_access": "outdoor",
+      "id": "the-smug-fig",
+      "type": "cafe"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.6,
+          "review_count": 890,
+          "platform": "Google Maps",
+          "scope": "venue",
+          "source": "https://restaurantguru.com/SNAG-and-BROWN-Greenslopes"
+        },
+        {
+          "stars": 4.6,
+          "review_count": 893,
+          "platform": "Google Maps",
+          "scope": "venue"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "Review summaries highlight the coffee, friendly service and a welcoming outdoor setting for dogs.",
+          "kind": "review_summary",
+          "source": "https://www.cylex-australia.com/company/snag---brown-23959236.html"
+        },
+        {
+          "text": "The directory reports that dogs can use a small fenced play area behind the café.",
+          "kind": "listing",
+          "source": "https://www.isitdogfriendly.com.au/venues/snag-and-brown-annerley"
+        },
+        {
+          "text": "Google Maps average 4.6 from 893 reviews.",
+          "kind": "agent_report"
+        }
+      ],
+      "name": "Snag & Brown",
+      "suburb": "Annerley",
+      "country": "Australia",
+      "address": "97 Ekibin Road, Annerley QLD 4103",
+      "latitude": -27.51354,
+      "longitude": 153.036513,
+      "phone": "+61721035647",
+      "website": "https://www.instagram.com/snagandbrown/",
+      "description": "Dogs are welcome in the outdoor courtyard. A local directory describes a small fenced play area behind the café. Review summaries highlight the coffee, friendly staff and outdoor setting.",
+      "sources": [
+        "https://www.instagram.com/snagandbrown/",
+        "https://visit.brisbane.qld.au/inspiration/things-to-do-with-dogs-in-brisbane",
+        "https://brisbanesbestcafe.com.au/cafe/snag-brown/",
+        "https://www.cylex-australia.com/company/snag---brown-23959236.html",
+        "https://www.isitdogfriendly.com.au/venues/snag-and-brown-annerley",
+        "https://restaurantguru.com/SNAG-and-BROWN-Greenslopes"
+      ],
+      "dog_access": "outdoor",
+      "id": "snag-and-brown",
+      "type": "cafe"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.9,
+          "review_count": 615,
+          "platform": "Google Maps",
+          "scope": "venue",
+          "source": "https://restaurantguru.com/Little-Genovese-East-Brisbane"
+        },
+        {
+          "stars": 4.9,
+          "review_count": 620,
+          "platform": "Google Maps",
+          "scope": "venue"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "A visitor reported a dog bowl brought to the rear courtyard table and treats for the dogs. They also liked the coffee and prompt service.",
+          "kind": "review",
+          "source": "https://restaurantguru.com/Little-Genovese-East-Brisbane"
+        },
+        {
+          "text": "Google Maps average 4.9 from 620 reviews.",
+          "kind": "agent_report"
+        }
+      ],
+      "name": "Little Genovese",
+      "suburb": "Coorparoo",
+      "country": "Australia",
+      "address": "17 Clarence Street, Coorparoo QLD 4151",
+      "latitude": -27.489105,
+      "longitude": 153.054765,
+      "phone": "+61733941097",
+      "website": "https://genovese.com.au/contact-us/",
+      "description": "Dogs can join diners in the rear outdoor courtyard. A visitor reported that staff brought a water bowl and treats for the dogs, and liked the coffee and prompt service.",
+      "sources": [
+        "https://genovese.com.au/contact-us/",
+        "https://www.queensland.com/au/en/things-to-do/food-and-drink/restaurants-and-cafes/dog-friendly-cafes-brisbane",
+        "https://restaurantguru.com/Little-Genovese-East-Brisbane"
+      ],
+      "dog_access": "outdoor",
+      "puppuccino": true,
+      "id": "little-genovese",
+      "type": "cafe"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.4,
+          "review_count": 885,
+          "platform": "Google Maps",
+          "scope": "venue",
+          "source": "https://foodandwinewithlove.com.au/todd-and-pup-398-tarragindi-rd"
+        },
+        {
+          "stars": 4.4,
+          "review_count": 886,
+          "platform": "Google Maps",
+          "scope": "venue"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "A visitor who brings their dog to cafés said the food for dogs felt particularly well considered.",
+          "kind": "review",
+          "source": "https://restaurantguru.com/Todd-and-Pup-Moorooka"
+        },
+        {
+          "text": "Tourism Queensland lists puppuccinos, a dedicated dog menu and water bowls on the deck.",
+          "kind": "listing",
+          "source": "https://www.queensland.com/au/en/things-to-do/food-and-drink/restaurants-and-cafes/dog-friendly-cafes-brisbane"
+        },
+        {
+          "text": "Google Maps average 4.4 from 886 reviews.",
+          "kind": "agent_report"
+        }
+      ],
+      "name": "Todd & Pup",
+      "suburb": "Moorooka",
+      "country": "Australia",
+      "address": "398 Tarragindi Road, Moorooka QLD 4105",
+      "latitude": -27.535662,
+      "longitude": 153.032769,
+      "phone": "+61466236927",
+      "website": "https://www.toddandpup.com.au/blank",
+      "description": "The outdoor deck welcomes dogs and has water bowls. Tourism Queensland lists puppuccinos and a dedicated dog menu. A visitor with a dog praised the care put into the food for pups.",
+      "sources": [
+        "https://www.toddandpup.com.au/blank",
+        "https://www.opentable.com.au/r/todd-and-pup-moorooka",
+        "https://www.queensland.com/au/en/things-to-do/food-and-drink/restaurants-and-cafes/dog-friendly-cafes-brisbane",
+        "https://restaurantguru.com/Todd-and-Pup-Moorooka",
+        "https://foodandwinewithlove.com.au/todd-and-pup-398-tarragindi-rd"
+      ],
+      "dog_access": "outdoor",
+      "puppuccino": true,
+      "id": "todd-and-pup",
+      "type": "cafe"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.4,
+          "review_count": 986,
+          "platform": "Google Maps",
+          "scope": "venue",
+          "source": "https://wanderlog.com/place/details/1337598/sassafras-of-paddington"
+        },
+        {
+          "stars": 4.4,
+          "review_count": 989,
+          "platform": "Google Maps",
+          "scope": "venue"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "Reviewers liked the courtyard for brunch, dietary choices and treats for dogs. Some reported slower service at busy times.",
+          "kind": "review_summary",
+          "source": "https://wanderlog.com/place/details/1337598/sassafras-of-paddington"
+        },
+        {
+          "text": "The venue advertises dog biscuits, a dog menu and pupaccinos in its courtyard garden.",
+          "kind": "venue",
+          "source": "https://www.sassafrasofpaddington.com.au/about-us"
+        },
+        {
+          "text": "Google Maps average 4.4 from 989 reviews.",
+          "kind": "agent_report"
+        }
+      ],
+      "name": "Sassafras of Paddington",
+      "suburb": "Paddington",
+      "country": "Australia",
+      "address": "88 Latrobe Terrace, Paddington QLD 4064",
+      "latitude": -27.459477,
+      "longitude": 152.9982,
+      "phone": "+61408088961",
+      "website": "https://www.sassafrasofpaddington.com.au/about-us",
+      "description": "Dogs can join diners in the courtyard garden, where the café advertises pupaccinos, dog biscuits and a dog menu. Reviewers liked the outdoor brunch setting and dietary options. Some reported slower service at busy times.",
+      "sources": [
+        "https://www.sassafrasofpaddington.com.au/about-us",
+        "https://wanderlog.com/place/details/1337598/sassafras-of-paddington"
+      ],
+      "dog_access": "outdoor",
+      "puppuccino": true,
+      "id": "sassafras",
+      "type": "cafe"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.3,
+          "review_count": 339,
+          "platform": "Google Maps",
+          "scope": "venue",
+          "source": "https://menumap.com.au/qld/holland-park/coffee"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "The dining guide describes shaded outdoor seating for people with dogs.",
+          "kind": "listing",
+          "source": "https://www.agfg.com.au/article/dining-with-animals-petfriendly-restaurants-where-furry-friends-are-part-of-the-experience"
+        },
+        {
+          "text": "Holland Park News reports the café sells Coopers Cookies dog treats.",
+          "kind": "listing",
+          "source": "https://hollandparknews.com.au/stomp-espresso-family-fave/"
+        }
+      ],
+      "name": "Stomp Espresso",
+      "suburb": "Holland Park",
+      "country": "Australia",
+      "address": "109 Holland Road, Holland Park QLD 4121",
+      "latitude": -27.51681,
+      "longitude": 153.07027,
+      "phone": "+61 420 319 036",
+      "website": "https://www.facebook.com/204432089425889/",
+      "description": "Coffee and light meals on Holland Road. Dogs can join diners at shaded outdoor tables. Local coverage lists dog biscuits for sale.",
+      "sources": [
+        "https://brisbaneapp.com.au/places/5310",
+        "https://mapcarta.com/N9461838003",
+        "https://www.agfg.com.au/article/dining-with-animals-petfriendly-restaurants-where-furry-friends-are-part-of-the-experience",
+        "https://hollandparknews.com.au/stomp-espresso-family-fave/",
+        "https://menumap.com.au/qld/holland-park/coffee"
+      ],
+      "dog_access": "outdoor",
+      "id": "stomp-espresso",
+      "type": "cafe"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.4,
+          "review_count": 1077,
+          "platform": "Google Maps",
+          "scope": "venue",
+          "source": "https://wanderlog.com/place/details/1337323/deedot-coffee-house"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "Broadsheet describes a wraparound outdoor area that accommodates dogs and larger groups.",
+          "kind": "listing",
+          "source": "https://www.broadsheet.com.au/brisbane/holland-park/cafes/dee-dot"
+        }
+      ],
+      "name": "Deedot Coffee House",
+      "suburb": "Holland Park West",
+      "country": "Australia",
+      "address": "1/973 Logan Road, Holland Park West QLD 4121",
+      "latitude": -27.5199373,
+      "longitude": 153.0618453,
+      "phone": "+61 7 3161 5748",
+      "website": "https://www.deedot.com.au/",
+      "description": "Specialty coffee and brunch on Logan Road. Dogs can join diners in the large outdoor seating area that wraps around the front.",
+      "sources": [
+        "https://www.deedot.com.au/",
+        "https://directindex.org/r/deedot.com.au",
+        "https://www.broadsheet.com.au/brisbane/holland-park/cafes/dee-dot",
+        "https://wanderlog.com/place/details/1337323/deedot-coffee-house"
+      ],
+      "dog_access": "outdoor",
+      "id": "deedot-coffee-house",
+      "type": "cafe"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.8,
+          "review_count": 616,
+          "platform": "Google Maps",
+          "scope": "venue",
+          "source": "https://pawscapes.com.au/restaurants/mount-gravatt-east-deli-dakota-specialty-coffee-and-sandwiches"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "The local guide describes a compact outdoor dining area on the shared footpath.",
+          "kind": "listing",
+          "source": "https://pawscapes.com.au/restaurants/mount-gravatt-east-deli-dakota-specialty-coffee-and-sandwiches"
+        },
+        {
+          "text": "A customer reported complimentary dog treats.",
+          "kind": "review",
+          "source": "https://lovemycafe.com.au/brisbane/deli-dakota/"
+        }
+      ],
+      "name": "Deli Dakota",
+      "suburb": "Mount Gravatt East",
+      "country": "Australia",
+      "address": "30 Badminton Street, Mount Gravatt East QLD 4122",
+      "latitude": -27.5292763,
+      "longitude": 153.0883106,
+      "phone": "+61 493 869 397",
+      "website": "https://www.delidakota.com.au/",
+      "description": "Specialty coffee and sandwiches with dog-friendly footpath tables. Outdoor seating is limited and close to passing pedestrians.",
+      "sources": [
+        "https://www.delidakota.com.au/contact",
+        "https://pawscapes.com.au/restaurants/mount-gravatt-east-deli-dakota-specialty-coffee-and-sandwiches",
+        "https://lovemycafe.com.au/brisbane/deli-dakota/"
+      ],
+      "dog_access": "outdoor",
+      "id": "deli-dakota",
+      "type": "cafe"
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.6,
+          "review_count": 278,
+          "platform": "Google Maps",
+          "scope": "venue",
+          "source": "https://www.isitdogfriendly.com.au/venues/badminton-brew-mount-gravatt-east"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "BringFido identifies the patio as dog-friendly.",
+          "kind": "listing",
+          "source": "https://www.bringfido.ca/restaurant/119189"
+        },
+        {
+          "text": "The pet-friendly venue listing reports puppuccinos and handmade dog treats.",
+          "kind": "listing",
+          "source": "https://www.isitdogfriendly.com.au/venues/badminton-brew-mount-gravatt-east"
+        }
+      ],
+      "name": "Badminton Brew",
+      "suburb": "Mount Gravatt East",
+      "country": "Australia",
+      "address": "36 Badminton Street, Mount Gravatt East QLD 4122",
+      "latitude": -27.5292238,
+      "longitude": 153.0885908,
+      "phone": "+61 423 900 571",
+      "website": "https://www.facebook.com/392047187619949/",
+      "description": "A neighbourhood coffee shop with dog-friendly patio seating. Local listings report puppuccinos and handmade dog treats.",
+      "sources": [
+        "https://www.bringfido.ca/restaurant/119189",
+        "https://www.isitdogfriendly.com.au/venues/badminton-brew-mount-gravatt-east"
+      ],
+      "dog_access": "outdoor",
+      "id": "badminton-brew",
+      "type": "cafe",
+      "puppuccino": true
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.3,
+          "review_count": 318,
+          "platform": "Google Maps",
+          "scope": "venue",
+          "source": "https://www.isitdogfriendly.com.au/types/cafe/brisbane"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "The café's listing reports outdoor seating and treats for dogs.",
+          "kind": "listing",
+          "source": "https://www.isitdogfriendly.com.au/venues/ralph-and-co-camp-hill"
+        },
+        {
+          "text": "The vet practice in the same shopping centre mentions puppuccinos for visiting dogs.",
+          "kind": "listing",
+          "source": "https://whiteshillvet.com.au/pet-advice/unleash-the-fun-top-dog-friendly-cafes-in-camps-hill/"
+        }
+      ],
+      "name": "Ralph & Co",
+      "suburb": "Camp Hill",
+      "country": "Australia",
+      "address": "11/17 Samuel Street, Camp Hill QLD 4152",
+      "latitude": -27.5006439,
+      "longitude": 153.0764086,
+      "phone": "+61 466 808 565",
+      "website": "https://bookings.nowbookit.com/?accountid=f8a17a54-fffb-4d8e-b4e0-b42248b2ce07&bg=transparent&colors=hex%2C000000&theme=light&venueid=8437",
+      "description": "A Camp Hill Marketplace café with dog-friendly outdoor tables. The neighbouring vet practice lists puppuccinos.",
+      "sources": [
+        "https://www.camphillmarketplace.com.au/",
+        "https://www.isitdogfriendly.com.au/venues/ralph-and-co-camp-hill",
+        "https://whiteshillvet.com.au/pet-advice/unleash-the-fun-top-dog-friendly-cafes-in-camps-hill/",
+        "https://www.isitdogfriendly.com.au/types/cafe/brisbane"
+      ],
+      "dog_access": "outdoor",
+      "id": "ralph-and-co",
+      "type": "cafe",
+      "puppuccino": true
+    },
+    {
+      "ratings": [],
+      "public_ratings": [
+        {
+          "stars": 4.4,
+          "review_count": 421,
+          "platform": "Google Maps",
+          "scope": "venue",
+          "source": "https://www.isitdogfriendly.com.au/venues/rabbit-and-co-cafe-coorparoo"
+        }
+      ],
+      "research_notes": [
+        {
+          "text": "The pet-friendly listing identifies the alfresco area as the place to sit with a dog.",
+          "kind": "listing",
+          "source": "https://www.isitdogfriendly.com.au/venues/rabbit-and-co-cafe-coorparoo"
+        }
+      ],
+      "name": "Rabbit & Co Café",
+      "suburb": "Coorparoo",
+      "country": "Australia",
+      "address": "5/148 Chatsworth Road, Coorparoo QLD 4151",
+      "latitude": -27.5053086,
+      "longitude": 153.0582515,
+      "phone": "+61 409 577 048",
+      "website": "https://rabbitgroup.cafe/",
+      "description": "Corner café for coffee and brunch. Dogs can join diners at the outdoor tables.",
+      "sources": [
+        "https://lovemycafe.com.au/brisbane/rabbit-co-cafe/",
+        "https://www.isitdogfriendly.com.au/venues/rabbit-and-co-cafe-coorparoo"
+      ],
+      "dog_access": "outdoor_only",
+      "id": "rabbit-and-co",
+      "type": "cafe"
+    }
+  ],
+  "sources_checked_on": "2026-11-19",
+  "park_attribution": {
+    "publisher": "Brisbane City Council",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "sources": [
+      "https://data.brisbane.qld.gov.au/explore/dataset/park-dog-off-leash-areas/",
+      "https://data.brisbane.qld.gov.au/explore/dataset/park-locations/",
+      "https://data.brisbane.qld.gov.au/explore/dataset/park-drinking-fountain-tap-locations/",
+      "https://www.brisbane.qld.gov.au/parks-and-recreation/bushland-and-wetlands/find-reserves-and-forests/whites-hill-reserve"
+    ],
+    "changes": "Selected nearby records, matched addresses and water facilities, and summarized dog amenities."
+  },
+  "cafe_coordinate_source": "https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Location/QldLocator/GeocodeServer",
+  "research_checked_on": "2026-11-19"
+}

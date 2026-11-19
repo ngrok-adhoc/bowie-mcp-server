@@ -1,0 +1,13 @@
+# Holland Park seed data
+
+Ship one readable JSON file with at least 10 off-leash dog parks and 10 dog-friendly cafés within 20 km of Holland Park, Brisbane. Measure straight-line distance from Queensland's published Holland Park locality point (-27.51944, 153.07278). Prefer nearby records. [Queensland Place Names Register, record 49443](https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Location/QldPlaceNames/MapServer/0/query?where=REF_NO%3D49443&outFields=REF_NO%2CPLACE_NAME%2CLATITUDE_DD%2CLONGITUDE_DD&f=pjson).
+
+- Include name, type, street address or park access street, suburb, country, and coordinates. Include a public business phone number and website for cafés where published.
+- Keep dog details brief. For parks, include off-leash access, fencing, drinking water and seating in or near the enclosure when supported. For cafés, note where dogs can sit and whether the venue offers puppuccinos or other dog treats when supported. Leave unknown details blank.
+- Save a plain-text description and attributed research notes for each place in the main catalog. Include public ratings when the platform, score, review count and listing scope are known. Identify whether a public score covers the whole park or its dog enclosure. Public aggregates stay separate from submitted reviews. The [research snapshot](../data/place-reviews.json) records the source material for the initial import.
+- [x] Check that the JSON contains at least 10 distinct places of each type and all are within 20 km. The catalog has 16 parks and 16 cafés, all within 10 km. The six new dog parks are within 5.4 km and the six new cafés are within 2.2 km.
+- [x] Verify the MCP find tools return available addresses, contact details, and dog notes.
+
+The [catalog](../data/places.json) includes a published business number for each café. Little Black Pug's pin uses its published car park entrance. Whites Hill Reserve includes the Boundary Rd Dog Park listing under its existing ID. DogPack's pin is beside the Council-mapped enclosure, and its published 5.0 from five reviews applies to that enclosure. [Brisbane City Council](https://www.brisbane.qld.gov.au/parks-and-recreation/bushland-and-wetlands/find-reserves-and-forests/whites-hill-reserve), [DogPack](https://www.dogpackapp.com/parks/australia/queensland/brisbane-city/boundary-rd-dog-park).
+
+Brisbane City Council park records are licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). [Off-leash areas](https://data.brisbane.qld.gov.au/explore/dataset/park-dog-off-leash-areas/), [park locations](https://data.brisbane.qld.gov.au/explore/dataset/park-locations/), [drinking fountains and taps](https://data.brisbane.qld.gov.au/explore/dataset/park-drinking-fountain-tap-locations/).

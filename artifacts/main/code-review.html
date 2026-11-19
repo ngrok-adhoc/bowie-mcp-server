@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bowie initial code review</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f5f7f8; color: #18252d; font: 1rem/1.55 system-ui, sans-serif; }
+    main { width: min(100% - 3rem, 56rem); margin: 3rem auto; }
+    h1 { margin: 0; font-size: clamp(2rem, 4vw, 2.6rem); line-height: 1.1; }
+    h2 { margin: 1.5rem 0 .75rem; font-size: 1.3rem; }
+    h3 { margin: 0; font-size: 1.1rem; }
+    header { border-bottom: 2px solid #376377; padding-bottom: 1.15rem; }
+    p, ul { margin: .6rem 0 0; }
+    article { margin: .75rem 0; padding: 1rem 1.25rem; background: #fff; border: 1px solid #d9e1e4; border-left: .25rem solid #376377; border-radius: .4rem; }
+    article:first-of-type { border-left-color: #a94336; }
+    code { overflow-wrap: anywhere; }
+    a { color: #21576e; }
+    li + li { margin-top: .35rem; }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Bowie initial code review</h1>
+    <p>Keep Bowie's upstream private before using the OAuth provider. The review also found two issues when switching to or recreating the Compose deployment.</p>
+    <p>The review covered staged, unstaged, and untracked files for the single-process MCP server, Holland Park catalog, and optional OAuth deployment.</p>
+  </header>
+  <section>
+    <h2>Findings</h2>
+    <article>
+      <h3>P1 · Keep the OAuth upstream private</h3>
+      <p>The README describes pointing the OAuth provider at a public ngrok URL for Bowie. The server checks allowed hostnames and has no built-in authentication. A publicly reachable upstream needs its own access controls to protect the catalog's add and review tools.</p>
+      <p>Document loopback or private networking as the default and require separate access controls for a public upstream.</p>
+      <p><a href="../../README.md">README.md, line 31</a> · <a href="../../mcp_server.py">mcp_server.py, line 408</a></p>
+    </article>
+    <article>
+      <h3>P2 · Persist the OAuth provider's state</h3>
+      <p>The OAuth container mounts the consent icon. Recreating that container loses the signing keys, client registrations, and grants the provider stores in its writable layer. Existing clients can lose access even when the public URL stays the same.</p>
+      <p>Mount a named volume at <code>/app/.mcp-oauth-provider</code>.</p>
+      <p><a href="../../docker-compose.yaml">docker-compose.yaml, line 36</a></p>
+    </article>
+    <article>
+      <h3>P2 · Use a Compose-specific upstream setting</h3>
+      <p>Reusing the documented local <code>.env</code> passes <code>http://127.0.0.1:3001/mcp</code> verbatim to the OAuth container, where loopback points at the provider itself. Compose configuration rendering confirmed the resolved URL.</p>
+      <p>Give Compose its own override or document clearing the local setting so Compose uses <code>http://bowie:3001/mcp</code>.</p>
+      <p><a href="../../docker-compose.yaml">docker-compose.yaml, line 32</a> · <a href="../../README.md">README.md, line 55</a></p>
+    </article>
+    <article>
+      <h3>P3 · Correct the Docker report's entry point</h3>
+      <p>The report's startup command names <code>server.py</code>, which the image does not contain. Use <code>mcp_server.py</code> so the documented command can be reproduced.</p>
+      <p><a href="dockerfile-review.html">dockerfile-review.html, line 28</a> · <a href="../../Dockerfile">Dockerfile, line 12</a></p>
+    </article>
+  </section>
+  <section>
+    <h2>Review checks</h2>
+    <ul>
+      <li>The HTTP integration test passed, including tool calls, restart persistence, and both MCP client revisions.</li>
+      <li>Ruff lint and mypy passed. Ruff format check flagged <code>tests/test_server.py</code>.</li>
+      <li>The catalog parsed with 16 parks and 16 cafés and unique IDs.</li>
+      <li>Compose configuration rendering confirmed the upstream URL and the OAuth container's mounts.</li>
+      <li>Live OAuth and Docker rebuilds were outside the review scope.</li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>
