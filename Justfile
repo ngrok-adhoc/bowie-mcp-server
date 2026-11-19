@@ -10,6 +10,6 @@ docker-build:
 mcp:
     uv run --locked mcp_server.py
 
-# Start the ngrok OAuth provider after starting Bowie.
+# Start the ngrok OAuth provider after starting the MCP server.
 oauth:
-    node ../mcp-oauth-provider/dist/bin/mcp-oauth-provider.js
+    npx --yes --package='git+ssh://git@github.com/ngrok-adhoc/mcp-oauth-provider.git#main' mcp-oauth-provider

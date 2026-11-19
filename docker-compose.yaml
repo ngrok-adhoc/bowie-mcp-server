@@ -20,7 +20,10 @@ services:
 
   oauth:
     profiles: [oauth]
-    build: ../mcp-oauth-provider
+    build:
+      context: "ssh://git@github.com/ngrok-adhoc/mcp-oauth-provider.git#main"
+      ssh:
+        - default
     init: true
     depends_on:
       bowie:

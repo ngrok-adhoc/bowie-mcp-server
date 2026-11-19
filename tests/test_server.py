@@ -96,7 +96,9 @@ class BowieHTTPTest(unittest.TestCase):
             legacy.pop("description", None)
             legacy["notes"] = "Legacy shade and water details."
             path.write_text(json.dumps(fixture))
-            (project / "mcp_server.py").write_bytes((ROOT / "mcp_server.py").read_bytes())
+            (project / "mcp_server.py").write_bytes(
+                (ROOT / "mcp_server.py").read_bytes()
+            )
             with running_server(project) as url:
                 ids = asyncio.run(self.exercise_tools(url, legacy["id"]))
             with running_server(project) as url:

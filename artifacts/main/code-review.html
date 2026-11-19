@@ -63,6 +63,16 @@
       <li>Live OAuth and Docker rebuilds were outside the review scope.</li>
     </ul>
   </section>
+  <section>
+    <h2>Follow-up verification</h2>
+    <ul>
+      <li>Local MCP and the isolated Docker Compose stack exposed all six tools and returned nearest-first Holland Park search results.</li>
+      <li>The local launcher and Compose fetched the OAuth provider from GitHub. The Compose provider reached the private MCP upstream. Its temporary public ngrok endpoint required OAuth and served protected-resource metadata.</li>
+      <li>A request with an unknown MCP session ID returned <code>404 Session not found</code>. A fresh client connected successfully. The README documents reconnecting after a restart.</li>
+      <li>The README's diagram, section links, and tool definitions were checked. The dependency lock, HTTP integration test, Ruff lint and formatting, and mypy passed.</li>
+      <li>Interactive Google sign-in in a hosted MCP client was outside this smoke test.</li>
+    </ul>
+  </section>
 </main>
 </body>
 </html>
