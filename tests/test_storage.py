@@ -11,26 +11,26 @@ from botocore.response import StreamingBody
 from botocore.stub import Stubber
 from fastmcp import Client
 
-from mcp_server import Catalog, Park, Rating, catalog_s3, mcp, read_catalog
+from mcp_server import Park, PlaceCollection, Rating, mcp, read_collection, s3_storage
 
-OBJECT = {"Bucket": "test-catalog", "Key": "bowie/places.json"}
+OBJECT = {"Bucket": "test-bowie-data", "Key": "bowie/places.json"}
 
 
-def json_bytes(catalog: Catalog) -> bytes:
+def json_bytes(collection: PlaceCollection) -> bytes:
     return (
-        catalog.model_dump_json(
+        collection.model_dump_json(
             indent=2, exclude_none=True, exclude_computed_fields=True
         )
         + "\n"
     ).encode()
 
 
-def object_response(catalog: Catalog, etag: str) -> dict[str, object]:
-    contents = json_bytes(catalog)
+def object_response(collection: PlaceCollection, etag: str) -> dict[str, object]:
+    contents = json_bytes(collection)
     return {"Body": StreamingBody(BytesIO(contents), len(contents)), "ETag": etag}
 
 
-class S3CatalogTest(unittest.TestCase):
+class S3StorageTest(unittest.TestCase):
     def setUp(self) -> None:
         client = boto3.client(
             "s3",
@@ -45,15 +45,15 @@ class S3CatalogTest(unittest.TestCase):
             patch.dict(
                 os.environ,
                 {
-                    "CATALOG_STORAGE": "s3",
-                    "CATALOG_S3_BUCKET": OBJECT["Bucket"],
-                    "CATALOG_S3_KEY": "",
+                    "STORAGE": "s3",
+                    "S3_BUCKET": OBJECT["Bucket"],
+                    "S3_KEY": "",
                 },
             )
         )
-        catalog_s3.cache_clear()
-        self.addCleanup(catalog_s3.cache_clear)
-        self.catalog = Catalog(
+        s3_storage.cache_clear()
+        self.addCleanup(s3_storage.cache_clear)
+        self.collection = PlaceCollection(
             places=[
                 Park(
                     id="park",
@@ -65,8 +65,8 @@ class S3CatalogTest(unittest.TestCase):
             ]
         )
         path = Path(self.enterContext(tempfile.TemporaryDirectory())) / "places.json"
-        path.write_bytes(json_bytes(self.catalog))
-        self.enterContext(patch("mcp_server.CATALOG_PATH", path))
+        path.write_bytes(json_bytes(self.collection))
+        self.enterContext(patch("mcp_server.DATA_PATH", path))
 
     def test_seeds_a_missing_object_without_replacing_another_seed(self) -> None:
         self.stub.add_client_error(
@@ -78,24 +78,24 @@ class S3CatalogTest(unittest.TestCase):
             http_status_code=412,
             expected_params={
                 **OBJECT,
-                "Body": json_bytes(self.catalog),
+                "Body": json_bytes(self.collection),
                 "ContentType": "application/json",
                 "IfNoneMatch": "*",
             },
         )
-        existing = Catalog(places=[])
+        existing = PlaceCollection(places=[])
         self.stub.add_response(
             "get_object", object_response(existing, '"winner"'), OBJECT
         )
 
-        self.assertEqual(read_catalog(initialize_s3=True), (existing, '"winner"'))
+        self.assertEqual(read_collection(initialize_s3=True), (existing, '"winner"'))
         self.stub.assert_no_pending_responses()
 
     def test_round_trip_and_conflicting_review(self) -> None:
-        updated = self.catalog.model_copy(deep=True)
+        updated = self.collection.model_copy(deep=True)
         updated.places[0].ratings.append(Rating(stars=4))
         self.stub.add_response(
-            "get_object", object_response(self.catalog, '"original"'), OBJECT
+            "get_object", object_response(self.collection, '"original"'), OBJECT
         )
         self.stub.add_response(
             "put_object",
@@ -137,7 +137,7 @@ class S3CatalogTest(unittest.TestCase):
                     "review_dog_park", {**args, "stars": 1}, raise_on_error=False
                 )
                 self.assertTrue(blocked.is_error)
-                self.assertIn("The catalog changed", str(blocked.content))
+                self.assertIn("The saved data changed", str(blocked.content))
                 listed = await client.call_tool("find_dog_parks")
                 assert listed.structured_content is not None
                 self.assertEqual(

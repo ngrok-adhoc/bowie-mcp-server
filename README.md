@@ -4,7 +4,7 @@
 
 Use this demo to learn how to restrict access to an MCP server over an ngrok tunnel. Clients like Claude and ChatGPT use the standard MCP OAuth flow through a drop-in proxy. The MCP server serves its tools, and authentication runs outside the app in the [companion MCP OAuth provider](https://github.com/ngrok-adhoc/mcp-oauth-provider).
 
-The server comes with a catalog of dog-friendly cafés and off-leash dog parks around Holland Park in Brisbane.
+The server comes with seed data for dog-friendly cafés and off-leash dog parks around Holland Park in Brisbane.
 
 Once connected, try asking your MCP client “Find off-leash dog parks within 3 km of Holland Park, nearest first.” Radius searches include nearby suburbs and measure straight-line distance to saved locations.
 
@@ -96,9 +96,9 @@ docker compose --profile oauth up --build
 
 Compose starts the MCP server and OAuth provider as separate containers. The provider reaches the server at `http://bowie:3001/mcp` on the Docker network. Your local `MCP_SERVER_URL` and `ALLOWED_HOSTS` settings apply to the Just workflow. Connect to the public **MCP** URL printed by the provider and sign in with Google.
 
-By default, the server image seeds the `bowie-data` named volume with `data/places.json`. Local catalog edits persist across rebuilds and `docker compose down`.
+By default, the server image seeds the `bowie-data` named volume with `data/places.json`. Local edits to places and reviews persist across rebuilds and `docker compose down`.
 
-The Compose provider uses `STORAGE=local` and saves OAuth signing keys, client registrations, and grants in the `oauth-state` named volume. Keep that volume across container replacements. `docker compose down -v` deletes it along with the catalog volume.
+The Compose provider uses `STORAGE=local` and saves OAuth signing keys, client registrations, and grants in the `oauth-state` named volume. Keep that volume across container replacements. `docker compose down -v` deletes it along with the Bowie data volume.
 
 For a separately deployed provider, use `STORAGE=s3` with a private bucket and AWS credentials to persist OAuth state without a local volume. S3 mode fails startup if the state object is inaccessible. See the [OAuth provider's storage configuration](https://github.com/ngrok-adhoc/mcp-oauth-provider#store-oauth-state-in-s3).
 
@@ -127,24 +127,30 @@ git push origin refs/tags/v0.1.0
 
 The [Publish Bowie image workflow](.github/workflows/publish-image.yml) publishes `v0.1.0`, `0.1.0`, and `sha-<full-commit-sha>` tags to GHCR. Pushes to `main` that change image inputs warm the build cache. To retry a failed release, rerun the workflow or run `gh workflow run publish-image.yml --ref v0.1.0`.
 
-## Store the catalog in S3
+## Store places and reviews in S3
 
-For a hosted MCP server, use a private Amazon S3 bucket to keep the catalog across deployments. Set these environment variables on the MCP server, or in `.env` for Just or Docker Compose:
+For a hosted MCP server, use a private Amazon S3 bucket to keep places and reviews across deployments. Set these environment variables on the MCP server, or in `.env` for Just or Docker Compose:
 
 ```dotenv
-CATALOG_STORAGE=s3
-CATALOG_S3_BUCKET=your-private-bucket
-CATALOG_S3_KEY=bowie/places.json
+STORAGE=s3
+S3_BUCKET=your-private-bucket
+S3_KEY=bowie/places.json
 AWS_DEFAULT_REGION=ap-southeast-2
 ```
 
-`CATALOG_S3_KEY` defaults to `bowie/places.json`. Supply AWS credentials through the SDK's standard credential chain, such as the host's AWS role or `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_SESSION_TOKEN` for temporary credentials.
+`S3_KEY` defaults to `bowie/places.json`. Supply AWS credentials through the SDK's standard credential chain, such as the host's AWS role or `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_SESSION_TOKEN` for temporary credentials.
 
-Grant `s3:GetObject` and `s3:PutObject` on that object. For a missing key, the server also needs `s3:ListBucket` so S3 can report that it does not exist. On startup the server seeds a missing object from `data/places.json`. To migrate an existing local catalog or Docker volume, upload its `places.json` to the intended key before starting the S3-backed server.
+Grant `s3:GetObject` and `s3:PutObject` on that object. For a missing key, the server also needs `s3:ListBucket` so S3 can report that it does not exist. On startup the server seeds a missing object from `data/places.json`. To migrate existing local data or Docker volume, upload its `places.json` to the intended key before starting the S3-backed server.
 
-S3 startup fails if the object cannot be read or initialized. A conditional write rejects an edit if another server has changed the catalog since it was read. Retry the edit to apply it to the latest catalog. [Amazon S3 conditional writes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/conditional-writes.html)
+S3 startup fails if the object cannot be read or initialized. A conditional write rejects an edit if another server has updated the data since it was read. Retry the edit to apply it to the latest data. [Amazon S3 conditional writes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/conditional-writes.html)
 
-Catalog storage is configured independently of the OAuth provider's `STORAGE` setting. Keep the catalog and OAuth state in separate S3 objects.
+Bowie's storage is configured independently of the OAuth provider's `STORAGE` setting. Keep Bowie's data and OAuth state in separate S3 objects.
+
+## Host Bowie on Ship
+
+Set Bowie's primary endpoint to an ngrok internal URL on port `3001`. Set `BIND_HOST=0.0.0.0`, configure S3 as above, and include the OAuth provider's public hostname in Bowie's `ALLOWED_HOSTS`.
+
+Run the OAuth provider as a separate Ship app in the same ngrok account. The provider creates its own public sign-in endpoint. Set `NGROK_URL` to a fixed HTTPS origin for that endpoint, set `MCP_SERVER_BINDING=internal`, and point `MCP_SERVER_URL` at the Bowie internal URL including `/mcp`. Set the provider's `STORAGE=s3` and give its OAuth state a separate S3 key.
 
 ## Troubleshooting
 

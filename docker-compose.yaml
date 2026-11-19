@@ -4,9 +4,9 @@ services:
     environment:
       BIND_HOST: 0.0.0.0
       ALLOWED_HOSTS: '["bowie"]'
-      CATALOG_STORAGE: ${CATALOG_STORAGE:-local}
-      CATALOG_S3_BUCKET: ${CATALOG_S3_BUCKET:-}
-      CATALOG_S3_KEY: ${CATALOG_S3_KEY:-}
+      STORAGE: ${STORAGE:-local}
+      S3_BUCKET: ${S3_BUCKET:-}
+      S3_KEY: ${S3_KEY:-}
       AWS_DEFAULT_REGION:
       AWS_ACCESS_KEY_ID:
       AWS_SECRET_ACCESS_KEY:

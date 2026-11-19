@@ -1,6 +1,6 @@
 [project]
 name = "bowie-mcp-server"
-version = "0.1.0"
+version = "0.1.1"
 description = "Find, add, and rate dog parks and dog-friendly cafés with MCP."
 requires-python = ">=3.11"
 dependencies = [

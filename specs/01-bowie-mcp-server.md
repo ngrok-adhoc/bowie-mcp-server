@@ -15,7 +15,7 @@ Build a small Python MCP server for an ngrok demo. An agent can find a dog park 
 - Give each place a stable ID, type, name, locality or suburb, and country. Keep street address, coordinates, public business phone, website, and a free-text description optional. Existing place notes are read as the description.
 - Use the description for general details such as separate small-dog areas, treats, shade, and busy periods. Parks retain the optional drinking-water filter and cafés retain dog access and puppuccino fields.
 - Find tools return every place of the requested type by default. Optional locality, country, and amenity filters narrow the result. A radius search uses the Holland Park locality point and returns places with saved coordinates, nearest first.
-- Use the [version-controlled JSON catalog](02-holland-park-seed-data.md) by default. Serialize writes in a single server process and replace the file atomically. Compose seeds a named volume from the image's catalog. When [S3 storage](../README.md#store-the-catalog-in-s3) is configured, conditionally create and update a single catalog object.
+- Use the [version-controlled place data](02-holland-park-seed-data.md) by default. Serialize writes in a single server process and replace the file atomically. Compose seeds a named volume from the image's seed data. When [S3 storage](../README.md#store-places-and-reviews-in-s3) is configured, conditionally create and update a single S3 object.
 
 ## Build and verify
 

@@ -34,17 +34,17 @@ from pydantic import (
 if TYPE_CHECKING:
     from mypy_boto3_s3 import S3Client
 
-CATALOG_PATH = Path(__file__).resolve().parent / "data" / "places.json"
+DATA_PATH = Path(__file__).resolve().parent / "data" / "places.json"
 HOST = "127.0.0.1"
 # Queensland Place Names Register, record 49443.
 HOLLAND_PARK_LAT, HOLLAND_PARK_LNG = map(radians, (-27.51944, 153.07278))
 
 # shortcut: local JSON supports one server process. Use S3 for shared storage.
-catalog_lock = Lock()
+data_lock = Lock()
 mcp = FastMCP(
     "Bowie",
     instructions=(
-        "Find, add, and review dog parks and dog-friendly cafés in Bowie's saved catalog. "
+        "Find, add, and review dog parks and dog-friendly cafés with Bowie. "
         "For nearby searches around Holland Park, use radius_km without suburb "
         "so results can cross suburb boundaries. "
         "Use public_ratings for published scores and attribute the platform. "
@@ -209,7 +209,7 @@ class Cafe(CafeDetails, RatedPlace):
 PlaceT = TypeVar("PlaceT", Park, Cafe)
 
 
-class Catalog(BaseModel):
+class PlaceCollection(BaseModel):
     model_config = ConfigDict(extra="allow")
 
     places: list[Annotated[Park | Cafe, Field(discriminator="type")]]
@@ -224,23 +224,25 @@ class CafeMatches(BaseModel):
 
 
 @cache
-def catalog_s3() -> tuple[S3Client, str, str] | None:
-    storage = os.environ.get("CATALOG_STORAGE", "local")
+def s3_storage() -> tuple[S3Client, str, str] | None:
+    storage = os.environ.get("STORAGE", "local")
     if storage == "local":
         return None
     if storage != "s3":
-        raise ValueError("CATALOG_STORAGE must be local or s3.")
-    bucket = os.environ.get("CATALOG_S3_BUCKET", "").strip()
+        raise ValueError("STORAGE must be local or s3.")
+    bucket = os.environ.get("S3_BUCKET", "").strip()
     if not bucket:
-        raise ValueError("Set CATALOG_S3_BUCKET when CATALOG_STORAGE=s3.")
-    key = os.environ.get("CATALOG_S3_KEY", "").strip() or "bowie/places.json"
+        raise ValueError("Set S3_BUCKET when STORAGE=s3.")
+    key = os.environ.get("S3_KEY", "").strip() or "bowie/places.json"
     return boto3.client("s3"), bucket, key
 
 
-def read_catalog(*, initialize_s3: bool = False) -> tuple[Catalog, str | None]:
-    s3 = catalog_s3()
+def read_collection(
+    *, initialize_s3: bool = False
+) -> tuple[PlaceCollection, str | None]:
+    s3 = s3_storage()
     if s3 is None:
-        return Catalog.model_validate_json(CATALOG_PATH.read_bytes()), None
+        return PlaceCollection.model_validate_json(DATA_PATH.read_bytes()), None
 
     client, bucket, key = s3
     try:
@@ -248,8 +250,8 @@ def read_catalog(*, initialize_s3: bool = False) -> tuple[Catalog, str | None]:
     except client.exceptions.NoSuchKey:
         if not initialize_s3:
             raise
-        seed = CATALOG_PATH.read_bytes()
-        Catalog.model_validate_json(seed)
+        seed = DATA_PATH.read_bytes()
+        PlaceCollection.model_validate_json(seed)
         try:
             client.put_object(
                 Bucket=bucket,
@@ -264,20 +266,20 @@ def read_catalog(*, initialize_s3: bool = False) -> tuple[Catalog, str | None]:
         response = client.get_object(Bucket=bucket, Key=key)
 
     with closing(response["Body"]) as body:
-        return Catalog.model_validate_json(body.read()), response["ETag"]
+        return PlaceCollection.model_validate_json(body.read()), response["ETag"]
 
 
-def save_catalog(catalog: Catalog, etag: str | None) -> None:
+def save_collection(collection: PlaceCollection, etag: str | None) -> None:
     contents = (
-        catalog.model_dump_json(
+        collection.model_dump_json(
             indent=2, exclude_none=True, exclude_computed_fields=True
         )
         + "\n"
     )
-    s3 = catalog_s3()
+    s3 = s3_storage()
     if s3 is not None:
         if etag is None:
-            raise RuntimeError("An ETag is required to update the S3 catalog.")
+            raise RuntimeError("An ETag is required to update the S3 data.")
         client, bucket, key = s3
         try:
             client.put_object(
@@ -290,19 +292,19 @@ def save_catalog(catalog: Catalog, etag: str | None) -> None:
         except ClientError as error:
             if error.response["ResponseMetadata"]["HTTPStatusCode"] in (409, 412):
                 raise ToolError(
-                    "The catalog changed during this edit. Retry the operation."
+                    "The saved data changed during this edit. Retry the operation."
                 ) from error
             raise
         return
 
     temp = NamedTemporaryFile(
-        mode="w", encoding="utf-8", dir=CATALOG_PATH.parent, delete=False
+        mode="w", encoding="utf-8", dir=DATA_PATH.parent, delete=False
     )
     temp_path = Path(temp.name)
     try:
         with temp:
             temp.write(contents)
-        temp_path.replace(CATALOG_PATH)
+        temp_path.replace(DATA_PATH)
     finally:
         temp_path.unlink(missing_ok=True)
 
@@ -340,13 +342,13 @@ def find_dog_parks(
     to include adjacent suburbs. Radius searches require saved coordinates.
     The drinking-water filter matches only an explicit yes or no.
     """
-    with catalog_lock:
-        catalog, _ = read_catalog()
+    with data_lock:
+        collection, _ = read_collection()
     return ParkMatches(
         places=by_distance(
             [
                 place
-                for place in catalog.places
+                for place in collection.places
                 if isinstance(place, Park)
                 and matches_location(place, suburb, country)
                 and (drinking_water is None or place.drinking_water is drinking_water)
@@ -369,13 +371,13 @@ def find_dog_cafes(
     Brisbane. Omit suburb to include adjacent suburbs. Radius searches require saved
     coordinates. The puppuccino filter matches only an explicit yes or no.
     """
-    with catalog_lock:
-        catalog, _ = read_catalog()
+    with data_lock:
+        collection, _ = read_collection()
     return CafeMatches(
         places=by_distance(
             [
                 place
-                for place in catalog.places
+                for place in collection.places
                 if isinstance(place, Cafe)
                 and matches_location(place, suburb, country)
                 and (puppuccino is None or place.puppuccino is puppuccino)
@@ -386,10 +388,10 @@ def find_dog_cafes(
 
 
 def add_place(place: Park | Cafe) -> None:
-    with catalog_lock:
-        catalog, etag = read_catalog()
-        catalog.places.append(place)
-        save_catalog(catalog, etag)
+    with data_lock:
+        collection, etag = read_collection()
+        collection.places.append(place)
+        save_collection(collection, etag)
 
 
 @mcp.tool(
@@ -425,12 +427,12 @@ def add_dog_cafe(place: CafeDetails) -> Cafe:
 
 
 def append_review(kind: type[PlaceT], place_id: str, rating: Rating) -> PlaceT:
-    with catalog_lock:
-        catalog, etag = read_catalog()
-        for place in catalog.places:
+    with data_lock:
+        collection, etag = read_collection()
+        for place in collection.places:
             if isinstance(place, kind) and place.id == place_id:
                 place.ratings.append(rating)
-                save_catalog(catalog, etag)
+                save_collection(collection, etag)
                 return place
     raise ToolError(f"No saved {kind.__name__.lower()} found for ID {place_id!r}.")
 
@@ -488,7 +490,7 @@ mcp_http = mcp.http_app(
 
 @asynccontextmanager
 async def lifespan(app: FastAPI) -> AsyncIterator[None]:
-    read_catalog(initialize_s3=True)
+    read_collection(initialize_s3=True)
     async with mcp_http.lifespan(app):
         yield
 
