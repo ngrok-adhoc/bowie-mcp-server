@@ -14,14 +14,14 @@ Your MCP client discovers these tools when it connects. FastMCP generates the in
 
 | Tool | What it does | Input | Output |
 | --- | --- | --- | --- |
-| `find_dog_parks` | Find saved off-leash dog parks | [Location, radius, and drinking-water filters](mcp_server.py#L263-L268) | [Matching parks](mcp_server.py#L212-L213) |
-| `find_dog_cafes` | Find saved dog-friendly cafés | [Location, radius, and puppuccino filters](mcp_server.py#L292-L297) | [Matching cafés](mcp_server.py#L216-L217) |
-| `add_dog_park` | Save a dog park | [Park details](mcp_server.py#L111-L114) | [Saved park](mcp_server.py#L193-L195) |
-| `add_dog_cafe` | Save a dog-friendly café | [Café details](mcp_server.py#L117-L124) | [Saved café](mcp_server.py#L198-L200) |
-| `review_dog_park` | Append a review to a saved park | [Place ID, stars, optional comment and source](mcp_server.py#L377-L382) | [Updated park](mcp_server.py#L193-L195) |
-| `review_dog_cafe` | Append a review to a saved café | [Place ID, stars, optional comment and source](mcp_server.py#L396-L401) | [Updated café](mcp_server.py#L198-L200) |
+| `find_dog_parks` | Find saved off-leash dog parks | [Location, radius, and drinking-water filters](mcp_server.py#L331-L336) | [Matching parks](mcp_server.py#L218-L219) |
+| `find_dog_cafes` | Find saved dog-friendly cafés | [Location, radius, and puppuccino filters](mcp_server.py#L360-L365) | [Matching cafés](mcp_server.py#L222-L223) |
+| `add_dog_park` | Save a dog park | [Park details](mcp_server.py#L117-L120) | [Saved park](mcp_server.py#L199-L201) |
+| `add_dog_cafe` | Save a dog-friendly café | [Café details](mcp_server.py#L123-L130) | [Saved café](mcp_server.py#L204-L206) |
+| `review_dog_park` | Append a review to a saved park | [Place ID, stars, optional comment and source](mcp_server.py#L445-L450) | [Updated park](mcp_server.py#L199-L201) |
+| `review_dog_cafe` | Append a review to a saved café | [Place ID, stars, optional comment and source](mcp_server.py#L464-L469) | [Updated café](mcp_server.py#L204-L206) |
 
-Both place types share [location and contact fields](mcp_server.py#L73-L108) and [ratings and comments](mcp_server.py#L151-L177).
+Both place types share [location and contact fields](mcp_server.py#L79-L114) and [ratings and comments](mcp_server.py#L157-L183).
 
 ## Choose how to run it
 
@@ -39,7 +39,7 @@ Install `just`, [uv](https://docs.astral.sh/uv/), and Python 3.11 or newer. From
 just mcp
 ```
 
-Connect a local MCP client directly to `http://127.0.0.1:3001/mcp`. This endpoint requires no sign-in. Local runs read and write `data/places.json`. Press Ctrl+C to stop the server.
+Connect a local MCP client directly to `http://127.0.0.1:3001/mcp`. This endpoint requires no sign-in. The server reads and writes `data/places.json` by default. Press Ctrl+C to stop the server.
 
 `just mcp` reads `BIND_HOST` and `ALLOWED_HOSTS` from the environment or the repo's `.env`. The bind address defaults to `127.0.0.1`. `ALLOWED_HOSTS` is a JSON list of additional HTTP hostnames. The MCP server always accepts `127.0.0.1`.
 
@@ -96,7 +96,7 @@ docker compose --profile oauth up --build
 
 Compose starts the MCP server and OAuth provider as separate containers. The provider reaches the server at `http://bowie:3001/mcp` on the Docker network. Your local `MCP_SERVER_URL` and `ALLOWED_HOSTS` settings apply to the Just workflow. Connect to the public **MCP** URL printed by the provider and sign in with Google.
 
-The server image bundles `data/places.json` and seeds the `bowie-data` named volume when it is first mounted empty. Catalog edits persist across rebuilds and `docker compose down`.
+By default, the server image seeds the `bowie-data` named volume with `data/places.json`. Local catalog edits persist across rebuilds and `docker compose down`.
 
 The Compose provider uses `STORAGE=local` and saves OAuth signing keys, client registrations, and grants in the `oauth-state` named volume. Keep that volume across container replacements. `docker compose down -v` deletes it along with the catalog volume.
 
@@ -105,6 +105,25 @@ For a separately deployed provider, use `STORAGE=s3` with a private bucket and A
 ### Run only the MCP container
 
 For direct access from a local client without authentication, run `docker compose up --build` and connect to `http://127.0.0.1:3001/mcp`.
+
+## Store the catalog in S3
+
+For a hosted MCP server, use a private Amazon S3 bucket to keep the catalog across deployments. Set these environment variables on the MCP server, or in `.env` for Just or Docker Compose:
+
+```dotenv
+CATALOG_STORAGE=s3
+CATALOG_S3_BUCKET=your-private-bucket
+CATALOG_S3_KEY=bowie/places.json
+AWS_DEFAULT_REGION=ap-southeast-2
+```
+
+`CATALOG_S3_KEY` defaults to `bowie/places.json`. Supply AWS credentials through the SDK's standard credential chain, such as the host's AWS role or `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_SESSION_TOKEN` for temporary credentials.
+
+Grant `s3:GetObject` and `s3:PutObject` on that object. For a missing key, the server also needs `s3:ListBucket` so S3 can report that it does not exist. On startup the server seeds a missing object from `data/places.json`. To migrate an existing local catalog or Docker volume, upload its `places.json` to the intended key before starting the S3-backed server.
+
+S3 startup fails if the object cannot be read or initialized. A conditional write rejects an edit if another server has changed the catalog since it was read. Retry the edit to apply it to the latest catalog. [Amazon S3 conditional writes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/conditional-writes.html)
+
+Catalog storage is configured independently of the OAuth provider's `STORAGE` setting. Keep the catalog and OAuth state in separate S3 objects.
 
 ## Troubleshooting
 

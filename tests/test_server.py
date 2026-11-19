@@ -1,5 +1,6 @@
 import asyncio
 import json
+import os
 import socket
 import subprocess
 import sys
@@ -30,9 +31,12 @@ def running_server(project: Path) -> Iterator[str]:
     with socket.socket() as candidate:
         candidate.bind(("127.0.0.1", 0))
         port = candidate.getsockname()[1]
+    env = {**os.environ, "BIND_HOST": "127.0.0.1"}
+    env.pop("CATALOG_STORAGE", None)
     process = subprocess.Popen(
         [sys.executable, "-c", f"from mcp_server import main; main({port})"],
         cwd=project,
+        env=env,
         stdout=subprocess.DEVNULL,
     )
     try:
