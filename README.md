@@ -106,6 +106,27 @@ For a separately deployed provider, use `STORAGE=s3` with a private bucket and A
 
 For direct access from a local client without authentication, run `docker compose up --build` and connect to `http://127.0.0.1:3001/mcp`.
 
+## Pull a released Docker image
+
+Bowie releases are available for Linux amd64 and arm64. Sign in to GHCR with a GitHub personal access token (classic) with `read:packages` and access to the package, then pull an exact version.
+
+```sh
+docker login ghcr.io
+docker pull ghcr.io/ngrok-adhoc/bowie-mcp-server:v0.1.0
+```
+
+### Cut a Docker release
+
+Set the release version in `pyproject.toml` and run `uv lock` if the version changes. Once the version is on `main`, tag that commit. For example:
+
+```sh
+git fetch origin main --tags
+git tag -a v0.1.0 origin/main -m "Bowie MCP server 0.1.0"
+git push origin refs/tags/v0.1.0
+```
+
+The [Publish Bowie image workflow](.github/workflows/publish-image.yml) publishes `v0.1.0`, `0.1.0`, and `sha-<full-commit-sha>` tags to GHCR. Pushes to `main` that change image inputs warm the build cache. To retry a failed release, rerun the workflow or run `gh workflow run publish-image.yml --ref v0.1.0`.
+
 ## Store the catalog in S3
 
 For a hosted MCP server, use a private Amazon S3 bucket to keep the catalog across deployments. Set these environment variables on the MCP server, or in `.env` for Just or Docker Compose:
