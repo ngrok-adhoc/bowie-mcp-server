@@ -32,7 +32,7 @@ def running_server(project: Path) -> Iterator[str]:
         candidate.bind(("127.0.0.1", 0))
         port = candidate.getsockname()[1]
     env = {**os.environ, "BIND_HOST": "127.0.0.1"}
-    env.pop("CATALOG_STORAGE", None)
+    env.pop("STORAGE", None)
     process = subprocess.Popen(
         [sys.executable, "-c", f"from mcp_server import main; main({port})"],
         cwd=project,
@@ -70,13 +70,13 @@ async def call(
 
 class BowieHTTPTest(unittest.TestCase):
     def test_tools_and_persistence(self) -> None:
-        catalog_file = ROOT / "data" / "places.json"
-        original_catalog = catalog_file.read_bytes()
+        data_file = ROOT / "data" / "places.json"
+        original_data = data_file.read_bytes()
         with tempfile.TemporaryDirectory() as temp:
             project = Path(temp)
             path = project / "data" / "places.json"
             path.parent.mkdir()
-            fixture = json.loads(original_catalog)
+            fixture = json.loads(original_data)
             legacy = next(
                 place for place in fixture["places"] if place["type"] == "park"
             )
@@ -107,7 +107,7 @@ class BowieHTTPTest(unittest.TestCase):
                 ids = asyncio.run(self.exercise_tools(url, legacy["id"]))
             with running_server(project) as url:
                 asyncio.run(self.check_restart(url, *ids))
-            original = json.loads(original_catalog)
+            original = json.loads(original_data)
             stored = json.loads(path.read_bytes())
             self.assertEqual(stored["park_attribution"], original["park_attribution"])
             stored_by_id = {place["id"]: place for place in stored["places"]}
@@ -133,11 +133,12 @@ class BowieHTTPTest(unittest.TestCase):
                     self.assertEqual(
                         stored_by_id[place["id"]]["sources"], place["sources"]
                     )
-        self.assertEqual(catalog_file.read_bytes(), original_catalog)
+        self.assertEqual(data_file.read_bytes(), original_data)
 
     async def exercise_tools(self, url: str, legacy_id: str) -> tuple[str, str]:
         async with Client(url) as client:
             self.assertEqual(client.protocol_version, "2026-07-28")
+            self.assertIn("with Bowie.", client.instructions or "")
             tools = {tool.name: tool for tool in await client.list_tools()}
             self.assertEqual(set(tools), TOOLS)
             for tool in tools.values():
