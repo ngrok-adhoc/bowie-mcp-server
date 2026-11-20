@@ -1,0 +1,7 @@
+*
+!Dockerfile
+!pyproject.toml
+!uv.lock
+!mcp_server.py
+!data/
+!data/places.json

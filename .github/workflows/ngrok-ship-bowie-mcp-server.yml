@@ -1,0 +1,60 @@
+# ngrok ship manages this workflow. Ship opens a pull request whenever its
+# template changes. To take over the file and stop those pull requests, add
+# the line "# ngrok-ship: pipeline-updates disabled" anywhere in it.
+#
+# ngrok-ship: pipeline-updates disabled
+# Taken over by hand: actions are pinned by commit SHA and the build runs on main only.
+
+name: "Build and Push Container (bowie-mcp-server / app_3MLS51AI5ZPxQ8BZyIKOnHsG7kG)"
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+env:
+  IMAGE_REFERENCE: "registry.ship.ngrok.com/ac_1gbcp4ul5rptr9eqgwj21icgsux/app_3mls51ai5zpxq8bzyikonhsg7kg"
+  NGROK_APP_ID: "app_3MLS51AI5ZPxQ8BZyIKOnHsG7kG"
+
+jobs:
+  build-and-push:
+    if: github.ref == 'refs/heads/main'
+    runs-on: "ubuntu-latest"
+    permissions:
+      contents: "read"
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - uses: docker/login-action@8aa5831fb8d48d8f76594c7ddde61ae58019f550 # v4
+        with:
+          registry: "registry.ship.ngrok.com"
+          username: "creg_3Fpsi82fNgKVILsGzy3HzE5JA28"
+          password: "${{ secrets.NGROK_REGISTRY_PASSWORD_CREG_3FPSI82FNGKVILSGZY3HZE5JA28 }}"
+
+      - id: "meta"
+        uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6
+        with:
+          images: "${{ env.IMAGE_REFERENCE }}"
+          tags: |
+            type=sha,format=long,prefix=
+
+      - uses: docker/build-push-action@c3c9e263c25d99ce0380d002d59b67737d91b0dc # v7
+        with:
+          context: "."
+          file: "Dockerfile"
+          push: true
+          tags: "${{ steps.meta.outputs.tags }}"
+          labels: "${{ steps.meta.outputs.labels }}"
+          build-args: |
+            COMMIT_SHA=${{ github.sha }}
+
+      - name: "Write image reference"
+        run: |
+          cat <<EOF > ngrok-image.json
+          {"image":"${{ steps.meta.outputs.tags }}","commit_sha":"${{ github.sha }}"}
+          EOF
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: "ngrok-compute-image"
+          path: "ngrok-image.json"

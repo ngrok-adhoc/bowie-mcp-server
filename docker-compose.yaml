@@ -1,0 +1,51 @@
+services:
+  bowie:
+    build: .
+    image: bowie-mcp-server:dev
+    environment:
+      BIND_HOST: 0.0.0.0
+      ALLOWED_HOSTS: '["bowie"]'
+      BOWIE_STORAGE: ${BOWIE_STORAGE:-local}
+      BOWIE_S3_BUCKET: ${BOWIE_S3_BUCKET:-}
+      BOWIE_S3_KEY: ${BOWIE_S3_KEY:-}
+      AWS_DEFAULT_REGION:
+      AWS_ACCESS_KEY_ID:
+      AWS_SECRET_ACCESS_KEY:
+      AWS_SESSION_TOKEN:
+    volumes:
+      - bowie-data:/app/data
+    ports:
+      - "127.0.0.1:3001:3001"
+    healthcheck:
+      test:
+        - CMD
+        - /app/.venv/bin/python
+        - -c
+        - "import socket; socket.create_connection(('127.0.0.1', 3001), timeout=2).close()"
+      interval: 2s
+      timeout: 3s
+      retries: 10
+
+  oauth:
+    profiles: [oauth]
+    image: ghcr.io/ngrok-adhoc/mcp-oauth-provider:v0.1.1
+    init: true
+    depends_on:
+      bowie:
+        condition: service_healthy
+    environment:
+      NGROK_AUTHTOKEN: ${NGROK_AUTHTOKEN:-}
+      USERS: ${USERS:-[]}
+      NGROK_URL: ${NGROK_URL:-}
+      MCP_SERVER_URL: http://bowie:3001/mcp
+      STORAGE: local
+      MCP_SERVER_NAME: Bowie MCP
+      MCP_SERVER_ICON: /app/bowie-icon.png
+      CLAUDE_CIMD: ${CLAUDE_CIMD:-}
+    volumes:
+      - ./bowie-icon.png:/app/bowie-icon.png:ro
+      - oauth-state:/app/.mcp-oauth-provider
+
+volumes:
+  bowie-data:
+  oauth-state:

@@ -1,0 +1,13 @@
+.env
+/.mcp-oauth-provider/
+.venv/
+__pycache__/
+.mypy_cache/
+.ruff_cache/
+artifacts/
+.DS_Store
+.env.*
+!.env.example
+.pytest_cache/
+.idea/
+.vscode/
